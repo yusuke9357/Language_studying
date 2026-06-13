@@ -1,23 +1,23 @@
-/* CSS Design System for Callan AI Tutor (Apple HIG & Mobile-First Redesign) */
+/* CSS Design System for Callan AI Tutor (Apple HIG & Mobile-First Redesign - Light Theme) */
 
 :root {
-  /* iOS Dark Mode Semantic Colors */
-  --bg-deep: #000000;              /* Pure Black background */
-  --bg-surface: #1c1c1e;           /* System Secondary Dark Gray */
-  --bg-surface-hover: #2c2c2e;     /* System Tertiary Dark Gray */
-  --border-light: #2c2c2e;         /* Thin separators */
-  --border-focus: #0a84ff;         /* System Blue */
+  /* iOS Light Mode Semantic Colors */
+  --bg-deep: #f2f2f7;              /* System Grouped Background Gray (Light) */
+  --bg-surface: #ffffff;           /* Pure White for cards/lists */
+  --bg-surface-hover: #e5e5ea;     /* System Gray 6 */
+  --border-light: #e5e5ea;         /* Soft Separator Gray */
+  --border-focus: #007aff;         /* iOS System Blue */
   
-  --primary: #0a84ff;              /* System Blue */
-  --primary-glow: rgba(10, 132, 255, 0.15);
-  --secondary: #30d158;            /* System Green */
-  --secondary-glow: rgba(48, 209, 88, 0.15);
+  --primary: #007aff;              /* iOS System Blue */
+  --primary-glow: rgba(0, 122, 255, 0.15);
+  --secondary: #34c759;            /* iOS System Green */
+  --secondary-glow: rgba(52, 199, 89, 0.15);
   
-  --accent: #ff9f0a;               /* System Orange */
-  --success: #30d158;              /* System Green */
-  --danger: #ff453a;               /* System Red */
-  --text-main: #ffffff;            /* Pure White */
-  --text-muted: #8e8e93;           /* Secondary Label Gray */
+  --accent: #ff9500;               /* iOS System Orange */
+  --success: #34c759;              /* iOS System Green */
+  --danger: #ff3b30;               /* iOS System Red */
+  --text-main: #000000;            /* Pure Black (Primary label) */
+  --text-muted: #8e8e93;           /* Secondary Gray Label */
   
   /* System Typography Hierarchy (Apple HIG) */
   --font-ui: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -64,7 +64,7 @@ html {
   position: relative;
 }
 
-/* Header (Clean iOS Bar) */
+/* Header (Clean iOS Bar - Light Mode) */
 .app-header {
   height: 54px;
   display: flex;
@@ -72,7 +72,7 @@ html {
   justify-content: space-between;
   padding: 0 16px;
   border-bottom: 0.5px solid var(--border-light);
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   z-index: 10;
@@ -114,8 +114,8 @@ html {
 }
 
 .stat-badge {
-  background: rgba(255, 159, 10, 0.1);
-  border: 0.5px solid rgba(255, 159, 10, 0.25);
+  background: rgba(255, 149, 0, 0.1);
+  border: 0.5px solid rgba(255, 149, 0, 0.25);
   padding: 3px 8px;
   border-radius: 12px;
   font-size: 0.8rem;
@@ -156,7 +156,7 @@ html {
   height: 20px;
 }
 
-/* Glassmorphism Card Style */
+/* Glassmorphism Card Style (Light Mode Blur) */
 .card {
   background: var(--bg-surface);
   border: 0.5px solid var(--border-light);
@@ -166,8 +166,7 @@ html {
 }
 
 .glass {
-  /* Subtle glass depth */
-  background: rgba(28, 28, 30, 0.85);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 }
@@ -218,28 +217,28 @@ html {
 }
 
 .primary-btn:disabled {
-  background: #3a3a3c;
+  background: var(--bg-surface-hover);
   color: var(--text-muted);
   cursor: not-allowed;
 }
 
 .secondary-btn {
-  background: #2c2c2e;
+  background: var(--bg-surface-hover);
   color: var(--primary);
 }
 
 .secondary-btn:active {
   transform: scale(0.97);
-  background: #3a3a3c;
+  background: #d1d1d6;
 }
 
 .danger-btn {
-  background: rgba(255, 69, 58, 0.1);
+  background: rgba(255, 59, 48, 0.1);
   color: var(--danger);
 }
 
 .danger-btn:active {
-  background: rgba(255, 69, 58, 0.2);
+  background: rgba(255, 59, 48, 0.2);
 }
 
 .text-btn {
@@ -267,7 +266,7 @@ html {
 
 /* Badge Styles */
 .badge {
-  background: rgba(142, 142, 147, 0.15);
+  background: rgba(142, 142, 147, 0.1);
   color: var(--text-muted);
   padding: 3px 8px;
   border-radius: 6px;
@@ -275,7 +274,7 @@ html {
   font-weight: 500;
 }
 
-/* Form Styles (iOS Flat fields) */
+/* Form Styles (iOS Flat fields - Light Mode) */
 .form-group {
   margin-bottom: 16px;
   display: flex;
@@ -308,12 +307,12 @@ html {
 }
 
 .form-group input, .form-group select {
-  background: #1c1c1e;
+  background: var(--bg-deep);
   border: none;
   border-bottom: 0.5px solid var(--border-light);
   border-radius: 8px;
   padding: 10px 12px;
-  color: white;
+  color: var(--text-main);
   font-family: var(--font-ui);
   font-size: 0.95rem;
   transition: var(--transition-smooth);
@@ -321,7 +320,7 @@ html {
 
 .form-group input:focus, .form-group select:focus {
   outline: none;
-  background: #2c2c2e;
+  background: var(--bg-surface-hover);
   border-bottom-color: var(--primary);
 }
 
@@ -423,7 +422,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #2c2c2e;
+  background: var(--bg-deep);
   padding: 8px 12px;
   border-radius: 8px;
   min-width: 65px;
@@ -603,7 +602,7 @@ html {
 .progress-bar {
   width: 80px;
   height: 4px;
-  background: #2c2c2e;
+  background: var(--bg-surface-hover);
   border-radius: 2px;
   overflow: hidden;
 }
@@ -649,7 +648,7 @@ html {
   position: absolute;
   top: 12px;
   left: 12px;
-  background: rgba(142, 142, 147, 0.15);
+  background: rgba(142, 142, 147, 0.1);
   color: var(--text-muted);
   font-size: 0.65rem;
   font-weight: 500;
@@ -659,12 +658,12 @@ html {
 
 .question-type-badge.revision {
   color: var(--accent);
-  background: rgba(255, 159, 10, 0.1);
+  background: rgba(255, 149, 0, 0.1);
 }
 
 .question-type-badge.newwork {
   color: var(--primary);
-  background: rgba(10, 132, 255, 0.1);
+  background: rgba(0, 122, 255, 0.1);
 }
 
 .question-visual-row {
@@ -696,7 +695,7 @@ html {
 .tutor-aura .aura-core {
   width: 100%;
   height: 100%;
-  background: #1c1c1e;
+  background: var(--bg-surface);
   border: 1.5px solid rgba(142, 142, 147, 0.3);
   border-radius: 50%;
   z-index: 2;
@@ -750,7 +749,7 @@ html {
 
 @keyframes siriPulse {
   0% { transform: scale(1.0); }
-  100% { transform: scale(1.1); box-shadow: 0 0 10px rgba(48, 209, 88, 0.3); }
+  100% { transform: scale(1.1); box-shadow: 0 0 10px rgba(52, 199, 89, 0.3); }
 }
 
 .tutor-speech {
@@ -821,7 +820,7 @@ html {
 .waveform-container {
   width: 100%;
   height: 44px;
-  background: #1c1c1e;
+  background: var(--bg-surface);
   border-radius: 8px;
   overflow: hidden;
   border: 0.5px solid var(--border-light);
@@ -835,8 +834,9 @@ html {
 }
 
 .speech-preview-box {
-  background: #1c1c1e;
+  background: var(--bg-surface);
   border-radius: 8px;
+  border: 0.5px solid var(--border-light);
   padding: 8px 12px;
   font-size: 0.9rem;
   font-style: italic;
@@ -846,7 +846,7 @@ html {
   min-height: 36px;
 }
 
-/* iOS Bottom Sheet (ハーフモーダル) Feedback Panel */
+/* iOS Bottom Sheet (ハーフモーダル) Feedback Panel - Light Mode */
 .feedback-card {
   position: fixed;
   bottom: 0;
@@ -854,13 +854,13 @@ html {
   transform: translate(-50%, 0);
   width: 100%;
   max-width: 500px;
-  background: #1c1c1e;
+  background: var(--bg-surface);
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border: 0.5px solid var(--border-light);
   border-bottom: none;
   padding: 20px 16px calc(20px + env(safe-area-inset-bottom));
-  box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.15); /* Soft light shadow */
   z-index: 20;
   transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
   display: block !important; /* display: none を無効化 */
@@ -889,12 +889,12 @@ html {
 }
 
 .correct .badge-result {
-  background: rgba(48, 209, 88, 0.15);
+  background: rgba(52, 199, 89, 0.15);
   color: var(--success);
 }
 
 .incorrect .badge-result {
-  background: rgba(255, 69, 58, 0.15);
+  background: rgba(255, 59, 48, 0.15);
   color: var(--danger);
 }
 
@@ -916,7 +916,7 @@ html {
   flex-direction: column;
   gap: 8px;
   margin-bottom: 12px;
-  background: #2c2c2e;
+  background: var(--bg-deep);
   padding: 10px;
   border-radius: 8px;
 }
@@ -944,16 +944,16 @@ html {
 
 /* Diff rendering styles */
 .diff-added {
-  color: #30d158;
-  background-color: rgba(48, 209, 88, 0.15);
+  color: #24b23e;
+  background-color: rgba(52, 199, 89, 0.15);
   padding: 0 1px;
   border-radius: 2px;
   text-decoration: underline;
 }
 
 .diff-removed {
-  color: #ff453a;
-  background-color: rgba(255, 69, 58, 0.15);
+  color: #ff3b30;
+  background-color: rgba(255, 59, 48, 0.15);
   padding: 0 1px;
   border-radius: 2px;
   text-decoration: line-through;
@@ -962,7 +962,7 @@ html {
 .feedback-explanation {
   display: flex;
   gap: 8px;
-  background: rgba(142, 142, 147, 0.08);
+  background: rgba(142, 142, 147, 0.05);
   padding: 10px;
   border-radius: 8px;
   margin-bottom: 14px;
@@ -994,9 +994,9 @@ html {
 
 .pronunciation-tip {
   margin-top: 6px;
-  border-top: 0.5px dashed rgba(10, 132, 255, 0.2);
+  border-top: 0.5px dashed rgba(0, 122, 255, 0.2);
   padding-top: 4px;
-  color: #a5f3fc;
+  color: #007aff;
   font-size: 0.75rem;
   line-height: 1.4;
 }
@@ -1018,7 +1018,7 @@ html {
   justify-content: space-between;
   padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
   border-top: 0.5px solid var(--border-light);
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   min-height: 84px;
@@ -1029,7 +1029,7 @@ html {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #1c1c1e;
+  background: var(--bg-deep);
   border: 0.5px solid var(--border-light);
   color: var(--primary);
   display: flex;
@@ -1041,7 +1041,7 @@ html {
 
 .control-circle-btn:active {
   transform: scale(0.92);
-  background: #2c2c2e;
+  background: var(--bg-surface-hover);
 }
 
 .control-circle-btn i {
@@ -1065,7 +1065,7 @@ html {
 }
 
 .mic-main-btn:disabled {
-  background: #2c2c2e;
+  background: var(--bg-surface-hover);
   color: var(--text-muted);
   cursor: not-allowed;
 }
@@ -1080,12 +1080,12 @@ html {
 }
 
 .mic-ripple {
-  display: none; /* Removed heavy visual ripple for HIG */
+  display: none;
 }
 
 .listening .mic-main-btn {
   background: var(--danger); /* Red record state */
-  box-shadow: 0 0 15px rgba(255, 69, 58, 0.4);
+  box-shadow: 0 0 15px rgba(255, 59, 48, 0.3);
 }
 
 /* Keyboard Text input bar */
@@ -1105,18 +1105,19 @@ html {
 
 .text-input-bar input {
   flex: 1;
-  background: #1c1c1e;
-  border: none;
+  background: var(--bg-surface);
+  border: 0.5px solid var(--border-light);
   border-radius: 20px;
   padding: 8px 14px;
-  color: white;
+  color: var(--text-main);
   font-family: var(--font-ui);
   font-size: 0.95rem;
 }
 
 .text-input-bar input:focus {
   outline: none;
-  background: #2c2c2e;
+  background: var(--bg-surface);
+  border-color: var(--primary);
 }
 
 .send-btn {
@@ -1216,7 +1217,7 @@ html {
 }
 
 .history-q-row {
-  background: #2c2c2e;
+  background: var(--bg-deep);
   border-radius: 8px;
   padding: 8px 10px;
   font-size: 0.8rem;
@@ -1310,8 +1311,8 @@ html {
 }
 
 .danger-zone {
-  border-color: rgba(255, 69, 58, 0.3);
-  background: rgba(255, 69, 58, 0.02);
+  border-color: rgba(255, 59, 48, 0.3);
+  background: rgba(255, 59, 48, 0.01);
 }
 
 .danger-zone p {
@@ -1322,7 +1323,7 @@ html {
 }
 
 .test-result-box {
-  background: #000;
+  background: var(--bg-deep);
   border: 0.5px solid var(--border-light);
   border-radius: 8px;
   padding: 8px;
@@ -1341,8 +1342,7 @@ html {
   bottom: 110px;
   left: 50%;
   transform: translateX(-50%);
-  background: #1c1c1e;
-  border: 0.5px solid var(--border-light);
+  background: rgba(0, 0, 0, 0.85); /* Keep dark toast for visual contrast in light mode */
   color: white;
   padding: 8px 16px;
   border-radius: 20px;
@@ -1350,7 +1350,7 @@ html {
   font-weight: 400;
   white-space: nowrap;
   z-index: 100;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
   animation: toastFadeIn 0.3s cubic-bezier(0.15, 0.85, 0.35, 1);
 }
 
@@ -1404,7 +1404,7 @@ html {
   width: 90px;
   height: 90px;
   border-radius: 10px;
-  background: #1c1c1e;
+  background: var(--bg-deep);
   border: 0.5px solid var(--border-light);
   display: flex;
   align-items: center;

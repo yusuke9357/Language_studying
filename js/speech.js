@@ -189,7 +189,7 @@ const SpeechManager = {
         this.animationFrameId = requestAnimationFrame(draw);
         this.analyser.getByteFrequencyData(this.dataArray);
         
-        ctx.fillStyle = '#1c1c1e'; // iOS secondary dark gray background
+        ctx.fillStyle = '#ffffff'; // iOS Light mode canvas background
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         
         // Very subtle glow to keep it clean
@@ -295,7 +295,7 @@ const SpeechManager = {
       if (!this.isListening) return;
       this.animationFrameId = requestAnimationFrame(drawSim);
       
-      ctx.fillStyle = '#1c1c1e'; // iOS secondary dark gray background
+      ctx.fillStyle = '#ffffff'; // iOS Light mode canvas background
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       
       // Very subtle glow to keep it clean
