@@ -2,6 +2,8 @@
 
 カランメソッドの解像度を高めたフェーズ2の全機能実装が完了しました。ユーザーログイン、動的イラスト表示、発音ミスの補正アドバイス、およびデプロイ環境の統合が正常に動作しています。
 
+**公開URL: [https://yusuke9357.github.io/Language_studying/](https://yusuke9357.github.io/Language_studying/)**
+
 ## 追加実装した変更内容
 
 以下の項目を新しく実装しました：
