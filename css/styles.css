@@ -20,8 +20,8 @@
   --text-muted: #9ca3af;    /* Muted Grey */
   
   /* Fonts */
-  --font-ui: 'Inter', sans-serif;
-  --font-display: 'Outfit', sans-serif;
+  --font-ui: 'Plus Jakarta Sans', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
   
   /* Transitions */
   --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1431,3 +1431,156 @@ html {
   display: flex;
   flex-direction: column;
 }
+
+/* ==========================================================================
+   Phase 3: Visual Polish & Micro-interactions
+   ========================================================================== */
+
+/* Tutor Aura & Fluid Blob Animations */
+.tutor-aura {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.tutor-aura .aura-core {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--primary-glow);
+  position: relative;
+  z-index: 2;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.5s ease;
+  animation: auraMorph 8s infinite alternate ease-in-out;
+}
+
+.tutor-aura .aura-glow {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: radial-gradient(circle, var(--secondary-glow) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0.6;
+  animation: auraPulse 3s infinite alternate ease-in-out;
+}
+
+/* Speaking State: Fast fluid morphing and slight voice-scaling vibration */
+.speaking .tutor-aura .aura-core {
+  transform: scale(1.15);
+  animation: auraMorph 3s infinite alternate ease-in-out, auraVoiceScale 0.15s infinite alternate ease-in-out;
+}
+
+.speaking .tutor-aura .aura-glow {
+  opacity: 0.9;
+  animation: auraPulse 1s infinite alternate ease-in-out;
+}
+
+/* Listening State: Cyan glow and fast fluid morphing */
+.listening-state .tutor-aura .aura-core {
+  background: linear-gradient(135deg, var(--secondary), #0d9488);
+  transform: scale(1.1);
+  animation: auraMorph 2s infinite alternate ease-in-out;
+  box-shadow: 0 0 25px var(--secondary-glow);
+}
+
+.listening-state .tutor-aura .aura-glow {
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.6) 0%, transparent 70%);
+  opacity: 0.8;
+  animation: auraPulse 1.5s infinite alternate ease-in-out;
+}
+
+/* Aura Fluid Bubble Morphing Keyframes */
+@keyframes auraMorph {
+  0% {
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+  }
+  25% {
+    border-radius: 70% 30% 52% 48% / 60% 40% 60% 40%;
+  }
+  50% {
+    border-radius: 30% 70% 40% 60% / 40% 60% 40% 60%;
+  }
+  75% {
+    border-radius: 60% 40% 60% 40% / 50% 50% 50% 50%;
+  }
+  100% {
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+  }
+}
+
+@keyframes auraVoiceScale {
+  0% { transform: scale(1.12); }
+  100% { transform: scale(1.18); }
+}
+
+@keyframes auraPulse {
+  0% { transform: scale(0.9); opacity: 0.4; }
+  100% { transform: scale(1.3); opacity: 0.8; }
+}
+
+/* Spring Button Effects */
+.btn {
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.btn:hover:not(:disabled) {
+  transform: scale(1.04) translateY(-1px);
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(0.96) translateY(0);
+}
+
+/* Form Input Focus and bottom-line highlights */
+.form-group input, .form-group select {
+  border-bottom: 2px solid var(--border-light);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.3);
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.form-group input:focus, .form-group select:focus {
+  border-color: var(--secondary);
+  box-shadow: 0 4px 15px rgba(6, 182, 212, 0.15);
+}
+
+/* Delayed Cascade Fade-in / Slide-up Animations for feedback card contents */
+.feedback-card {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: feedbackSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.feedback-card > * {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: feedbackItemCascade 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.feedback-card > *:nth-child(1) { animation-delay: 0.1s; }
+.feedback-card > *:nth-child(2) { animation-delay: 0.2s; }
+.feedback-card > *:nth-child(3) { animation-delay: 0.3s; }
+.feedback-card > *:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes feedbackSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes feedbackItemCascade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

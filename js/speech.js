@@ -192,31 +192,60 @@ const SpeechManager = {
         ctx.fillStyle = '#0b0a14'; // Background
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         
-        const barWidth = (canvas.width / bufferLength) * 2.5;
-        let barHeight;
-        let x = 0;
+        // Apply Glow Effect
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = '#06b6d4';
 
-        // Draw audio spectrum bars with smooth gradients
-        for (let i = 0; i < bufferLength; i++) {
-          barHeight = this.dataArray[i] / 2.5;
-          
-          // Apply min height for visual aesthetics when quiet
-          if (barHeight < 2) barHeight = 2; 
+        const drawWave = (color, amplitude, speed, offset) => {
+          ctx.beginPath();
+          ctx.strokeStyle = color;
+          ctx.lineWidth = 2.5;
 
-          // Cyan to purple gradient based on frequency
-          const gradient = ctx.createLinearGradient(0, canvas.height, 0, canvas.height - barHeight);
-          gradient.addColorStop(0, '#8b5cf6');
-          gradient.addColorStop(1, '#06b6d4');
-          
-          ctx.fillStyle = gradient;
-          
-          // Draw symmetric bars from bottom middle or standard bars
-          // Let's do rounded rectangles for a premium feel
-          const y = (canvas.height - barHeight) / 2;
-          this.drawRoundedRect(ctx, x, y, barWidth - 2, barHeight, 3);
+          const points = [];
+          const segments = 12;
+          const segmentWidth = canvas.width / segments;
 
-          x += barWidth + 1;
-        }
+          // Start point
+          points.push({ x: 0, y: canvas.height / 2 });
+
+          for (let i = 1; i < segments; i++) {
+            // Sample frequency bin data dynamically
+            const dataIdx = Math.floor((i / segments) * bufferLength);
+            const frequencyVal = (this.dataArray[dataIdx] || 0) / 255; // Normalize 0..1
+            
+            const x = i * segmentWidth;
+            // Time index for sine phase oscillation
+            const time = Date.now() * 0.003 * speed + offset + i;
+            const waveValue = Math.sin(time) * amplitude * (0.2 + frequencyVal * 0.8);
+            
+            // Hanning Window to taper waves smoothly near edges
+            const edgeDamp = Math.sin((i / segments) * Math.PI);
+            const y = canvas.height / 2 + waveValue * edgeDamp;
+            
+            points.push({ x, y });
+          }
+
+          // End point
+          points.push({ x: canvas.width, y: canvas.height / 2 });
+
+          // Draw bezier curve through points
+          ctx.moveTo(points[0].x, points[0].y);
+          for (let i = 0; i < points.length - 1; i++) {
+            const xc = (points[i].x + points[i + 1].x) / 2;
+            const yc = (points[i].y + points[i + 1].y) / 2;
+            ctx.quadraticCurveTo(points[i].x, points[i].y, xc, yc);
+          }
+          ctx.lineTo(points[points.length - 1].x, points[points.length - 1].y);
+          ctx.stroke();
+        };
+
+        // Draw 3 layers of glowing waves
+        drawWave('rgba(6, 182, 212, 0.8)', 22, 1.2, 0);          // Secondary (Cyan)
+        drawWave('rgba(139, 92, 246, 0.6)', 16, 0.8, Math.PI / 2); // Primary (Violet)
+        drawWave('rgba(249, 115, 22, 0.4)', 10, 1.5, Math.PI);     // Accent (Orange)
+        
+        // Reset shadow
+        ctx.shadowBlur = 0;
       };
 
       draw();
@@ -269,26 +298,58 @@ const SpeechManager = {
       ctx.fillStyle = '#0b0a14';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       
-      // Draw 3 sine waves
-      for (let w = 0; w < 3; w++) {
+      // Apply Glow Effect
+      ctx.shadowBlur = 10;
+      ctx.shadowColor = '#06b6d4';
+
+      const drawWave = (color, amplitude, speed, offset) => {
         ctx.beginPath();
-        ctx.lineWidth = w === 0 ? 2 : 1;
-        ctx.strokeStyle = w === 0 ? 'rgba(6, 182, 212, 0.7)' : w === 1 ? 'rgba(139, 92, 246, 0.4)' : 'rgba(139, 92, 246, 0.2)';
-        
-        const amplitude = (3 - w) * 8;
-        const frequency = (w + 1) * 0.01;
-        
-        for (let x = 0; x < canvas.width; x++) {
-          const y = canvas.height / 2 + Math.sin(x * frequency + phase) * amplitude * Math.sin(x * 0.003);
-          if (x === 0) {
-            ctx.moveTo(x, y);
-          } else {
-            ctx.lineTo(x, y);
-          }
+        ctx.strokeStyle = color;
+        ctx.lineWidth = 2.5;
+
+        const points = [];
+        const segments = 12;
+        const segmentWidth = canvas.width / segments;
+
+        // Start point
+        points.push({ x: 0, y: canvas.height / 2 });
+
+        for (let i = 1; i < segments; i++) {
+          const x = i * segmentWidth;
+          const time = phase * speed + offset + i;
+          // Simulated animation without microphone data
+          const waveValue = Math.sin(time) * amplitude;
+          
+          // Hanning Window to taper waves smoothly near edges
+          const edgeDamp = Math.sin((i / segments) * Math.PI);
+          const y = canvas.height / 2 + waveValue * edgeDamp;
+          
+          points.push({ x, y });
         }
+
+        // End point
+        points.push({ x: canvas.width, y: canvas.height / 2 });
+
+        // Draw bezier curve through points
+        ctx.moveTo(points[0].x, points[0].y);
+        for (let i = 0; i < points.length - 1; i++) {
+          const xc = (points[i].x + points[i + 1].x) / 2;
+          const yc = (points[i].y + points[i + 1].y) / 2;
+          ctx.quadraticCurveTo(points[i].x, points[i].y, xc, yc);
+        }
+        ctx.lineTo(points[points.length - 1].x, points[points.length - 1].y);
         ctx.stroke();
-      }
-      phase += 0.15;
+      };
+
+      // Draw 3 layers of glowing waves
+      drawWave('rgba(6, 182, 212, 0.8)', 18, 0.12, 0);
+      drawWave('rgba(139, 92, 246, 0.6)', 12, 0.08, Math.PI / 2);
+      drawWave('rgba(249, 115, 22, 0.4)', 8, 0.15, Math.PI);
+
+      phase += 1;
+      
+      // Reset shadow
+      ctx.shadowBlur = 0;
     };
     
     drawSim();
