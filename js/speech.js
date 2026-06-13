@@ -189,20 +189,20 @@ const SpeechManager = {
         this.animationFrameId = requestAnimationFrame(draw);
         this.analyser.getByteFrequencyData(this.dataArray);
         
-        ctx.fillStyle = '#0b0a14'; // Background
+        ctx.fillStyle = '#1c1c1e'; // iOS secondary dark gray background
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         
-        // Apply Glow Effect
-        ctx.shadowBlur = 10;
-        ctx.shadowColor = '#06b6d4';
+        // Very subtle glow to keep it clean
+        ctx.shadowBlur = 4;
+        ctx.shadowColor = '#0a84ff';
 
         const drawWave = (color, amplitude, speed, offset) => {
           ctx.beginPath();
           ctx.strokeStyle = color;
-          ctx.lineWidth = 2.5;
+          ctx.lineWidth = 1.5; // Thin delicate line
 
           const points = [];
-          const segments = 12;
+          const segments = 16; // More segments for smoother wave
           const segmentWidth = canvas.width / segments;
 
           // Start point
@@ -216,7 +216,7 @@ const SpeechManager = {
             const x = i * segmentWidth;
             // Time index for sine phase oscillation
             const time = Date.now() * 0.003 * speed + offset + i;
-            const waveValue = Math.sin(time) * amplitude * (0.2 + frequencyVal * 0.8);
+            const waveValue = Math.sin(time) * amplitude * (0.15 + frequencyVal * 0.85);
             
             // Hanning Window to taper waves smoothly near edges
             const edgeDamp = Math.sin((i / segments) * Math.PI);
@@ -239,10 +239,10 @@ const SpeechManager = {
           ctx.stroke();
         };
 
-        // Draw 3 layers of glowing waves
-        drawWave('rgba(6, 182, 212, 0.8)', 22, 1.2, 0);          // Secondary (Cyan)
-        drawWave('rgba(139, 92, 246, 0.6)', 16, 0.8, Math.PI / 2); // Primary (Violet)
-        drawWave('rgba(249, 115, 22, 0.4)', 10, 1.5, Math.PI);     // Accent (Orange)
+        // Draw 3 layers of thin Siri-style waves (Blue shades)
+        drawWave('rgba(10, 132, 255, 0.85)', 18, 1.2, 0);          // Primary Blue
+        drawWave('rgba(90, 200, 250, 0.5)', 12, 0.8, Math.PI / 2);  // Light Cyan
+        drawWave('rgba(88, 86, 214, 0.3)', 8, 1.5, Math.PI);        // Purple
         
         // Reset shadow
         ctx.shadowBlur = 0;
@@ -295,20 +295,20 @@ const SpeechManager = {
       if (!this.isListening) return;
       this.animationFrameId = requestAnimationFrame(drawSim);
       
-      ctx.fillStyle = '#0b0a14';
+      ctx.fillStyle = '#1c1c1e'; // iOS secondary dark gray background
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       
-      // Apply Glow Effect
-      ctx.shadowBlur = 10;
-      ctx.shadowColor = '#06b6d4';
+      // Very subtle glow to keep it clean
+      ctx.shadowBlur = 4;
+      ctx.shadowColor = '#0a84ff';
 
       const drawWave = (color, amplitude, speed, offset) => {
         ctx.beginPath();
         ctx.strokeStyle = color;
-        ctx.lineWidth = 2.5;
+        ctx.lineWidth = 1.5; // Thin delicate line
 
         const points = [];
-        const segments = 12;
+        const segments = 16; // More segments for smoother wave
         const segmentWidth = canvas.width / segments;
 
         // Start point
@@ -341,10 +341,10 @@ const SpeechManager = {
         ctx.stroke();
       };
 
-      // Draw 3 layers of glowing waves
-      drawWave('rgba(6, 182, 212, 0.8)', 18, 0.12, 0);
-      drawWave('rgba(139, 92, 246, 0.6)', 12, 0.08, Math.PI / 2);
-      drawWave('rgba(249, 115, 22, 0.4)', 8, 0.15, Math.PI);
+      // Draw 3 layers of thin Siri-style waves (Blue shades)
+      drawWave('rgba(10, 132, 255, 0.85)', 18, 0.12, 0);
+      drawWave('rgba(90, 200, 250, 0.5)', 12, 0.08, Math.PI / 2);
+      drawWave('rgba(88, 86, 214, 0.3)', 8, 0.15, Math.PI);
 
       phase += 1;
       

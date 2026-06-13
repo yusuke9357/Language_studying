@@ -103,7 +103,7 @@ const UiManager = {
             <span class="lesson-name">${lesson.name.split(': ')[1] || lesson.name}</span>
           </div>
           <div class="lesson-btn-right">
-            <i data-lucide="${isCompleted ? 'check-circle' : isLessonLocked ? 'lock' : 'play-circle'}"></i>
+            <i data-lucide="${isCompleted ? 'check' : isLessonLocked ? 'lock' : 'chevron-right'}"></i>
           </div>
         `;
 

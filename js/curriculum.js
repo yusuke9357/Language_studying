@@ -108,7 +108,7 @@ const CurriculumManager = {
     },
     2: {
       name: "Stage 2: Elementary",
-      description: "現在進行形（Doing）、所有代名詞（Mine, Yours）、否定比較",
+      description: "現在進行形（Doing）、所有代名詞（Mine, Yours）、一般動詞の基本と否定・疑問文",
       lessons: {
         1: {
           name: "Lesson 1: Present Continuous Actions",
@@ -167,15 +167,50 @@ const CurriculumManager = {
               expectedAnswer: "Yes, this classroom's ours."
             }
           ]
+        },
+        3: {
+          name: "Lesson 3: Present Simple & General Actions (一般動詞・時間)",
+          questions: [
+            {
+              id: "s2-l3-q1",
+              question: "Do you live in London? Do you live in London?",
+              hint: "No / Tokyo",
+              expectedAnswer: "No, I don't live in London, but I live in Tokyo."
+            },
+            {
+              id: "s2-l3-q2",
+              question: "Does he speak Japanese? Does he speak Japanese?",
+              hint: "Yes",
+              expectedAnswer: "Yes, he speaks Japanese."
+            },
+            {
+              id: "s2-l3-q3",
+              question: "What's the difference between a watch and a clock? What's the difference between a watch and a clock?",
+              hint: "Watch: wrist / Clock: wall",
+              expectedAnswer: "The difference between a watch and a clock is that we wear a watch on our wrist, whilst we hang a clock on the wall."
+            },
+            {
+              id: "s2-l3-q4",
+              question: "How many minutes are there in an hour? How many minutes are there in an hour?",
+              hint: "60",
+              expectedAnswer: "There are sixty minutes in an hour."
+            },
+            {
+              id: "s2-l3-q5",
+              question: "Do you come to school by train or by bus? Do you come to school by train or by bus?",
+              hint: "By train",
+              expectedAnswer: "I come to school by train."
+            }
+          ]
         }
       }
     },
     3: {
       name: "Stage 3: Pre-Intermediate",
-      description: "比較級（Bigger than）、過去形、時間・数えられない名詞の表現",
+      description: "比較級（Bigger than）、最上級・頻度の副詞、命令形・数量詞",
       lessons: {
         1: {
-          name: "Lesson 1: Comparatives",
+          name: "Lesson 1: Comparatives (比較級)",
           questions: [
             {
               id: "s3-l1-q1",
@@ -200,6 +235,157 @@ const CurriculumManager = {
               question: "Is the table longer than the room? Is the table longer than the room?",
               hint: "No / Shorter",
               expectedAnswer: "No, the table isn't longer than the room, but it's shorter than the room."
+            }
+          ]
+        },
+        2: {
+          name: "Lesson 2: Superlatives & Frequency Adverbs (最上級・頻度)",
+          questions: [
+            {
+              id: "s3-l2-q1",
+              question: "Which is the biggest city in Japan? Which is the biggest city in Japan?",
+              hint: "Tokyo",
+              expectedAnswer: "Tokyo's the biggest city in Japan."
+            },
+            {
+              id: "s3-l2-q2",
+              question: "Is your watch more expensive than your shoes? Is your watch more expensive than your shoes?",
+              hint: "Yes",
+              expectedAnswer: "Yes, my watch's more expensive than my shoes."
+            },
+            {
+              id: "s3-l2-q3",
+              question: "Do you always speak English at home? Do you always speak English at home?",
+              hint: "No / Sometimes",
+              expectedAnswer: "No, I don't always speak English at home, but I sometimes speak it."
+            },
+            {
+              id: "s3-l2-q4",
+              question: "Do you ever eat sugar? Do you ever eat sugar?",
+              hint: "Yes",
+              expectedAnswer: "Yes, I sometimes eat sugar."
+            }
+          ]
+        },
+        3: {
+          name: "Lesson 3: Imperatives & Quantity (命令形・数量詞)",
+          questions: [
+            {
+              id: "s3-l3-q1",
+              question: "What's the teacher telling the student to do? What's the teacher telling the student to do?",
+              hint: "Sit down",
+              expectedAnswer: "The teacher's telling the student to sit down."
+            },
+            {
+              id: "s3-l3-q2",
+              question: "Do we use 'much' for things we can count or cannot count? Do we use 'much' for things we can count or cannot count?",
+              hint: "Cannot count",
+              expectedAnswer: "We use 'much' for things we cannot count."
+            },
+            {
+              id: "s3-l3-q3",
+              question: "Do you read a lot of books? Do you read a lot of books?",
+              hint: "Yes",
+              expectedAnswer: "Yes, I read a lot of books."
+            },
+            {
+              id: "s3-l3-q4",
+              question: "Are there few cars in a big city? Are there few cars in a big city?",
+              hint: "No / Many",
+              expectedAnswer: "No, there aren't few cars in a big city, but there are many cars."
+            }
+          ]
+        }
+      }
+    },
+    4: {
+      name: "Stage 4: Intermediate-Intro",
+      description: "過去形・不規則動詞、現在完了形、条件文（if）",
+      lessons: {
+        1: {
+          name: "Lesson 1: Past Simple & Irregular Verbs (過去形・不規則動詞)",
+          questions: [
+            {
+              id: "s4-l1-q1",
+              question: "Did you watch TV last night? Did you watch TV last night?",
+              hint: "Yes",
+              expectedAnswer: "Yes, I watched TV last night."
+            },
+            {
+              id: "s4-l1-q2",
+              question: "What's the past tense of 'drink'? What's the past tense of 'drink'?",
+              hint: "Drank",
+              expectedAnswer: "The past tense of 'drink' is 'drank'."
+            },
+            {
+              id: "s4-l1-q3",
+              question: "Did you come to school by bus yesterday? Did you come to school by bus yesterday?",
+              hint: "No / By train",
+              expectedAnswer: "No, I didn't come to school by bus yesterday, but I came by train."
+            },
+            {
+              id: "s4-l1-q4",
+              question: "What did you see on the table this morning? What did you see on the table this morning?",
+              hint: "A book",
+              expectedAnswer: "I saw a book on the table this morning."
+            }
+          ]
+        },
+        2: {
+          name: "Lesson 2: Present Perfect (現在完了形)",
+          questions: [
+            {
+              id: "s4-l2-q1",
+              question: "Have you ever been to London? Have you ever been to London?",
+              hint: "No / Never",
+              expectedAnswer: "No, I've never been to London."
+            },
+            {
+              id: "s4-l2-q2",
+              question: "Have you lived in this city for many years? Have you lived in this city for many years?",
+              hint: "Yes",
+              expectedAnswer: "Yes, I've lived in this city for many years."
+            },
+            {
+              id: "s4-l2-q3",
+              question: "Have you eaten anything today? Have you eaten anything today?",
+              hint: "Yes",
+              expectedAnswer: "Yes, I've eaten something today."
+            },
+            {
+              id: "s4-l2-q4",
+              question: "Has the teacher finished the lesson? Has the teacher finished the lesson?",
+              hint: "No",
+              expectedAnswer: "No, the teacher hasn't finished the lesson."
+            }
+          ]
+        },
+        3: {
+          name: "Lesson 3: Conditionals (条件文)",
+          questions: [
+            {
+              id: "s4-l3-q1",
+              question: "If it rains tomorrow, will you stay at home? If it rains tomorrow, will you stay at home?",
+              hint: "Yes",
+              expectedAnswer: "Yes, if it rains tomorrow, I'll stay at home."
+            },
+            {
+              id: "s4-l3-q2",
+              question: "If you had a lot of money, what would you buy? If you had a lot of money, what would you buy?",
+              hint: "A big house",
+              expectedAnswer: "If I had a lot of money, I'd buy a big house."
+            },
+            {
+              id: "s4-l3-q3",
+              question: "If you speak English well, will you travel more? If you speak English well, will you travel more?",
+              hint: "Yes",
+              expectedAnswer: "Yes, if I speak English well, I'll travel more."
+            },
+            {
+              id: "s4-l3-q4",
+              question: "If you were a bird, would you fly? If you were a bird, would you fly?",
+              hint: "Yes",
+              expectedAnswer: "Yes, if I were a bird, I'd fly."
             }
           ]
         }

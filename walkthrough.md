@@ -40,3 +40,28 @@
 
 ### 4. 静的コード文法チェック
 - Node.jsにて全JavaScriptファイルのシンタックスチェックを実行し、構文エラーがないことを確認済。
+
+### 5. カリキュラムの拡充（Stage 1〜4）
+- Web上のカランメソッド教材シラバス調査結果に基づき、[curriculum.md](file:///Users/yusuke/Library/Mobile%20Documents/com~apple~CloudDocs/Dev/Language_studying/curriculum.md) および [curriculum.js](file:///Users/yusuke/Library/Mobile%20Documents/com~apple~CloudDocs/Dev/Language_studying/js/curriculum.js) を大幅に拡張。
+- Stage 2 に「Lesson 3: Present Simple & General Actions (一般動詞・時間)」、Stage 3 に「Lesson 2: Superlatives & Frequency Adverbs (最上級・頻度)」「Lesson 3: Imperatives & Quantity (命令形・数量詞)」、さらに新規で「Stage 4: Intermediate-Intro」を追加し、3つの新規レッスン（過去形・現在完了形・条件文）とそれに対応する合計12問のQ&Aセットを整備。
+- 全ての質問について、短縮形を必須とした目標回答、ヒント、およびイラスト用のVisual Cue（視覚的指示）を完全に同期させました。
+- 拡張した `curriculum.js` が構文エラーなく正しくコンパイルされることを `node -c` コマンドで検証済。
+
+---
+
+## 抜本的デザイン変更（Apple HIG ＆ モバイル最適化フェーズ）
+
+AI特有の装飾過多（ネオングローやディープ宇宙系グラデーション）を完全に脱却し、OS純正ツールのような使いやすさと美しさ、および屋外歩行中の利用を想定したタッチ操作性の向上を実現しました。
+
+1. **Apple HIG 準拠のクリーンなUI設計**
+   - **システムフォント優先**: Google Fonts の読み込みを廃止し、OSデフォルトフォント（SF Pro, Roboto等）を適用することで「AIアプリらしさ」を排し「高機能な道具」としての外観を構築。
+   - **純黒＆システムグレーテーマ**: 背景を `#000000` (純黒) とし、カード等のセカンダリ背景を `#1c1c1e` (iOSシステムダークグレー)、セパレーターを `#2c2c2e` に刷新。
+2. **iOS「設定」風のダッシュボード**
+   - カリキュラムリストを iOS 標準の `Grouped List` スタイルに変更。左右一杯に広がるクリーンなセルにし、右端には進捗状況に応じた `check`、`lock`、および `chevron-right` のみを表示する無駄のないレイアウトに変更しました。
+3. **Siri風のミニマル音声オーラ ＆ ボイスメモ風波形**
+   - 不定形モーフィングブロブを廃止し、iOSのSiriを彷彿とさせる繊細な「光の回転リング」（`.tutor-aura` / `siriSpin` アニメーション）に変更。発話・聞き取りのライフサイクルとシームレスに同期。
+   - 音声波形（マイクおよびダミー波形）を、Appleの「ボイスメモ」風の極細 1.5px 幅のクリアなシアンカラー・ベジェスレッド波形にアップグレード。
+4. **片手親指タッチUI (Fitts' Law)**
+   - キーボード切り替え、マイク起動、リピートなどの主要アクションを最下部（親指の届きやすいエリア）に集中配置し、タップターゲットを 50px 以上に確保。
+   - 判定フィードバックパネルを iOS Bottom Sheet (ハーフモーダル) 風に調整。画面下部から滑らかにせり上がり、歩行中でも親指一本で容易に「次へ進む」を押せるようにしました。
+
