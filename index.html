@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Callan AI Tutor - カランメソッド英会話</title>
+  <!-- Google Fonts: Outfit, Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Lucide Icons (CDN) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="dark-mode">
+  <div id="app">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-logo">
+        <span class="logo-icon"><i data-lucide="zap"></i></span>
+        <h1>Callan AI Tutor</h1>
+      </div>
+      <div class="header-status">
+        <div class="stat-badge" title="連続学習日数">
+          <i data-lucide="flame" class="icon-fire"></i>
+          <span id="header-streak">0</span>日
+        </div>
+        <button id="btn-show-history" class="icon-btn" title="学習履歴">
+          <i data-lucide="history"></i>
+        </button>
+        <button id="btn-show-settings" class="icon-btn" title="設定">
+          <i data-lucide="settings"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Screens Container -->
+    <main class="app-content">
+
+      <!-- SCREEN 0: Login Screen -->
+      <section id="screen-login" class="screen hidden">
+        <div class="card glass setup-card">
+          <div class="setup-header">
+            <i data-lucide="user-check" class="setup-icon" style="color: var(--primary)"></i>
+            <h2>学習者ログイン</h2>
+            <p>ユーザー名を入力して学習を開始します。</p>
+          </div>
+          <form id="login-form" class="setup-form">
+            <div class="form-group">
+              <label for="input-login-username">ユーザー名 (Username)</label>
+              <input type="text" id="input-login-username" required placeholder="例: yusuke" value="yusuke">
+            </div>
+            <button type="submit" class="btn primary-btn btn-block">
+              ログイン <i data-lucide="log-in"></i>
+            </button>
+          </form>
+          <div style="text-align: center; margin-top: 16px;">
+            <a href="#" id="link-login-to-setup" class="help-link" style="display: inline-flex; justify-content: center; gap: 4px;">
+              APIキーや同期設定を変更 <i data-lucide="settings" style="width: 14px; height: 14px;"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCREEN 1: Setup Wizard -->
+      <section id="screen-setup" class="screen hidden">
+        <div class="card glass setup-card">
+          <div class="setup-header">
+            <i data-lucide="shield-check" class="setup-icon"></i>
+            <h2>初期セットアップ</h2>
+            <p>アプリを動かすためのAPIキーとクラウド同期設定を行います。</p>
+          </div>
+          
+          <form id="setup-form" class="setup-form">
+            <div class="form-group">
+              <label for="input-gemini-key">
+                Gemini API Key
+                <a href="https://aistudio.google.com/" target="_blank" class="help-link">キーを取得 <i data-lucide="external-link"></i></a>
+              </label>
+              <input type="password" id="input-gemini-key" required placeholder="AI Studioで取得したAPIキーを入力">
+            </div>
+
+            <div class="divider"><span>GitHub 同期設定 (PC・スマホ同期用)</span></div>
+
+            <div class="form-group">
+              <label for="input-github-pat">
+                GitHub Personal Access Token (PAT)
+                <a href="https://github.com/settings/tokens/new?description=CallanAITutorSync&scopes=gist" target="_blank" class="help-link">トークンを作成 <i data-lucide="external-link"></i></a>
+              </label>
+              <input type="password" id="input-github-pat" placeholder="ghp_xxx... (gist権限のみでOK)">
+            </div>
+
+            <div class="form-group">
+              <label for="input-gist-id">Gist ID</label>
+              <div class="input-with-action">
+                <input type="text" id="input-gist-id" placeholder="既存のGist IDを入力するか、右のボタンで作成">
+                <button type="button" id="btn-auto-create-gist" class="btn secondary-btn" title="トークンを使ってプライベートGistを自動作成します">
+                  <i data-lucide="plus-circle"></i> 自動作成
+                </button>
+              </div>
+              <p class="input-desc">※トークンを入力後「自動作成」を押すと、クラウド同期用ファイルが自動で作成されます。</p>
+            </div>
+
+            <button type="submit" class="btn primary-btn btn-block">
+              セットアップを完了する <i data-lucide="arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- SCREEN 2: Dashboard -->
+      <section id="screen-dashboard" class="screen">
+        <!-- Welcoming & Stats -->
+        <div class="dashboard-hero">
+          <div class="hero-left">
+            <h2>Welcome back!</h2>
+            <p id="dashboard-subtitle">今日も英語の反射神経を鍛えましょう。</p>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat-card">
+              <span class="stat-num" id="stat-total-q">0</span>
+              <span class="stat-label">総回答数</span>
+            </div>
+            <div class="hero-stat-card">
+              <span class="stat-num" id="stat-avg-acc">0%</span>
+              <span class="stat-label">正解率</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Curriculum Stages -->
+        <div class="section-title">
+          <h3>カリキュラム選択</h3>
+          <span class="badge" id="current-stage-badge">Stage 1</span>
+        </div>
+
+        <div class="stages-container" id="stages-list">
+          <!-- Dynamically populated by JS -->
+          <div class="loading-placeholder">カリキュラムを読み込んでいます...</div>
+        </div>
+      </section>
+
+      <!-- SCREEN 3: Lesson Session -->
+      <section id="screen-lesson" class="screen hidden">
+        <div class="lesson-header-bar">
+          <button id="btn-quit-lesson" class="text-btn">
+            <i data-lucide="chevron-left"></i> 終了
+          </button>
+          <div class="lesson-title-info">
+            <span id="lesson-stage-title">Stage 1</span>
+            <h4 id="lesson-name-title">Lesson 1</h4>
+          </div>
+          <div class="lesson-progress-wrap">
+            <div class="progress-bar">
+              <div id="lesson-progress-fill" class="progress-fill" style="width: 0%"></div>
+            </div>
+            <span id="lesson-progress-text">0 / 0</span>
+          </div>
+        </div>
+
+        <!-- Lesson Interaction Space -->
+        <div class="lesson-workspace">
+          <!-- Question Box -->
+          <div class="card glass question-card" id="question-container">
+            <div class="question-type-badge" id="question-phase-badge">New Work</div>
+            <div class="question-visual-row">
+              <div class="tutor-avatar-wrap">
+                <div class="tutor-pulse" id="tutor-pulse-effect"></div>
+                <div class="tutor-avatar">
+                  <i data-lucide="bot"></i>
+                </div>
+              </div>
+              <!-- SVG Illustration Container -->
+              <div id="question-illustration" class="question-illustration-box"></div>
+            </div>
+            <!-- Tutor Speech Bubble -->
+            <div class="tutor-speech">
+              <p id="tutor-question-text" class="question-blur">Tutor is speaking...</p>
+              <button id="btn-toggle-question-visibility" class="toggle-visibility-btn" title="英文を表示/非表示">
+                <i data-lucide="eye-off"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Active Speech / User Input Waveform -->
+          <div class="input-status-area">
+            <div class="status-indicator" id="status-indicator">
+              <i data-lucide="volume-2" class="status-icon pulse-icon"></i>
+              <span id="status-text">Tutor is speaking...</span>
+            </div>
+            
+            <div class="waveform-container" id="waveform-wrap">
+              <canvas id="waveform-canvas"></canvas>
+            </div>
+
+            <!-- Speech transcription preview in real-time -->
+            <div id="speech-preview" class="speech-preview-box hidden"></div>
+          </div>
+
+          <!-- Evaluation / Feedback Panel (Hidden initially) -->
+          <div class="card glass feedback-card hidden" id="feedback-panel">
+            <div class="feedback-header">
+              <span class="badge-result" id="result-badge">Correct</span>
+              <span class="time-taken"><i data-lucide="clock"></i> <span id="result-time">0.0s</span></span>
+            </div>
+
+            <div class="feedback-comparison">
+              <div class="compare-row">
+                <span class="compare-label">あなたの回答:</span>
+                <p class="compare-text" id="result-user-answer"></p>
+              </div>
+              <div class="compare-row">
+                <span class="compare-label">目標回答 (Callan):</span>
+                <p class="compare-text expected-text" id="result-expected-answer"></p>
+              </div>
+            </div>
+
+            <div class="feedback-explanation">
+              <div class="explanation-icon"><i data-lucide="info"></i></div>
+              <div class="explanation-text">
+                <p id="result-callan-feedback"></p>
+                <p id="result-grammar-feedback" class="grammar-tip"></p>
+                <p id="result-pronunciation-feedback" class="pronunciation-tip hidden"></p>
+              </div>
+            </div>
+
+            <div class="feedback-actions">
+              <button id="btn-retry-question" class="btn secondary-btn hidden">
+                <i data-lucide="refresh-cw"></i> 再挑戦
+              </button>
+              <button id="btn-next-question" class="btn primary-btn">
+                次へ進む <i data-lucide="arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls Area (Bottom-fixed on Mobile) -->
+        <div class="lesson-controls">
+          <button id="btn-toggle-input-mode" class="control-circle-btn" title="キーボード入力に切り替え">
+            <i data-lucide="keyboard"></i>
+          </button>
+          
+          <!-- Large Mic Button -->
+          <button id="btn-microphone" class="mic-main-btn" disabled>
+            <div class="mic-ripple"></div>
+            <i data-lucide="mic"></i>
+          </button>
+
+          <button id="btn-repeat-question" class="control-circle-btn" title="もう一度聴く">
+            <i data-lucide="volume-2"></i>
+          </button>
+
+          <!-- Text Input Form (hidden by default) -->
+          <div id="text-input-container" class="text-input-bar hidden">
+            <input type="text" id="input-text-answer" placeholder="答えをテキストで入力して送信...">
+            <button id="btn-submit-text-answer" class="send-btn">
+              <i data-lucide="send"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCREEN 4: History -->
+      <section id="screen-history" class="screen hidden">
+        <div class="screen-header">
+          <button id="btn-back-from-history" class="text-btn">
+            <i data-lucide="chevron-left"></i> ダッシュボード
+          </button>
+          <h2>学習履歴</h2>
+        </div>
+        
+        <div class="history-list" id="history-container">
+          <!-- Dynamically populated by JS -->
+          <div class="empty-state">
+            <i data-lucide="calendar"></i>
+            <p>履歴はまだありません。レッスンを始めましょう！</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCREEN 5: Settings -->
+      <section id="screen-settings" class="screen hidden">
+        <div class="screen-header">
+          <button id="btn-back-from-settings" class="text-btn">
+            <i data-lucide="chevron-left"></i> ダッシュボード
+          </button>
+          <h2>設定</h2>
+        </div>
+
+        <div class="card glass settings-card">
+          <!-- Voice Settings -->
+          <div class="settings-section">
+            <h3><i data-lucide="volume-2"></i> 音声設定（英語チューター）</h3>
+            
+            <div class="form-group">
+              <label for="select-voice">音声の選択</label>
+              <select id="select-voice">
+                <option value="">システムデフォルト</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="range-rate">発話速度: <span id="rate-value">1.1</span>x</label>
+              <input type="range" id="range-rate" min="0.7" max="1.6" step="0.1" value="1.1">
+              <span class="range-hint">※カランメソッドは早口（1.1x〜1.3x）が推奨されます</span>
+            </div>
+
+            <div class="form-group">
+              <label for="range-pitch">音の高さ: <span id="pitch-value">1.0</span></label>
+              <input type="range" id="range-pitch" min="0.5" max="1.5" step="0.1" value="1.0">
+            </div>
+            
+            <button id="btn-test-speech" class="btn secondary-btn btn-sm">
+              <i data-lucide="play"></i> 音声テスト再生
+            </button>
+          </div>
+
+          <!-- API Settings -->
+          <div class="settings-section">
+            <h3><i data-lucide="key"></i> API 接続設定</h3>
+            
+            <div class="form-group">
+              <label for="settings-gemini-key">Gemini API Key</label>
+              <input type="password" id="settings-gemini-key" placeholder="APIキーを入力">
+            </div>
+
+            <div class="form-group">
+              <label for="settings-github-pat">GitHub PAT (Token)</label>
+              <input type="password" id="settings-github-pat" placeholder="ghp_xxx...">
+            </div>
+
+            <div class="form-group">
+              <label for="settings-gist-id">Gist ID</label>
+              <input type="text" id="settings-gist-id" placeholder="Gist IDを入力">
+            </div>
+
+            <div class="settings-row">
+              <button id="btn-test-connections" class="btn secondary-btn">
+                <i data-lucide="activity"></i> 接続テスト実行
+              </button>
+              <button id="btn-save-settings" class="btn primary-btn">
+                設定を保存
+              </button>
+            </div>
+            <div id="connection-test-result" class="test-result-box hidden"></div>
+          </div>
+
+          <!-- Data Management -->
+          <div class="settings-section danger-zone">
+            <h3><i data-lucide="alert-triangle"></i> 危険ゾーン</h3>
+            <p>ローカルキャッシュおよびクラウド同期データをすべて初期化します。</p>
+            <button id="btn-reset-data" class="btn danger-btn">
+              <i data-lucide="trash-2"></i> 全ての学習データを初期化
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Global Toast Notification -->
+    <div id="toast" class="toast hidden">
+      <span id="toast-message">メッセージ</span>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/storage.js"></script>
+  <script src="js/speech.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/curriculum.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
