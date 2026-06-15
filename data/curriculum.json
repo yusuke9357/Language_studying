@@ -1,0 +1,1766 @@
+{
+  "1": {
+    "name": "Stage 1: Beginner",
+    "description": "基本の文型、身の回りの名詞、位置関係（in, on, under 等）",
+    "lessons": {
+      "1": {
+        "name": "Lesson 1: Basic Objects & Colors",
+        "questions": [
+          {
+            "id": "s1-l1-q1",
+            "question": "Is this a pen? Is this a pen?",
+            "hint": "No / Pencil",
+            "expectedAnswer": "No, it isn't a pen, but it's a pencil.",
+            "visualCue": "鉛筆"
+          },
+          {
+            "id": "s1-l1-q2",
+            "question": "Is this a book? Is this a book?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, it's a book.",
+            "visualCue": "本"
+          },
+          {
+            "id": "s1-l1-q3",
+            "question": "Is this chair blue? Is this chair blue?",
+            "hint": "No / Red",
+            "expectedAnswer": "No, it isn't blue, but it's red.",
+            "visualCue": "赤い椅子"
+          },
+          {
+            "id": "s1-l1-q4",
+            "question": "Is this box small? Is this box small?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, it's small.",
+            "visualCue": "小さい箱"
+          },
+          {
+            "id": "s1-l1-q5",
+            "question": "Is this a large table? Is this a large table?",
+            "hint": "No / Small table",
+            "expectedAnswer": "No, it isn't a large table, but it's a small table.",
+            "visualCue": "小さいテーブル"
+          },
+          {
+            "id": "s1-l1-q6",
+            "question": "Is this a black pen? Is this a black pen?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, it's a black pen.",
+            "visualCue": "黒いペン"
+          },
+          {
+            "id": "s1-l1-q7",
+            "question": "Is this pencil long? Is this pencil long?",
+            "hint": "No / Short",
+            "expectedAnswer": "No, it isn't long, but it's short.",
+            "visualCue": "短い鉛筆"
+          },
+          {
+            "id": "s1-l1-q8",
+            "question": "Is this a table? Is this a table?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, it's a table.",
+            "visualCue": "テーブル"
+          },
+          {
+            "id": "s1-l1-q9",
+            "question": "Is this book red? Is this book red?",
+            "hint": "No / Green",
+            "expectedAnswer": "No, it isn't red, but it's green.",
+            "visualCue": "緑色の本"
+          },
+          {
+            "id": "s1-l1-q10",
+            "question": "Is this a short pen? Is this a short pen?",
+            "hint": "No / Long pen",
+            "expectedAnswer": "No, it isn't a short pen, but it's a long pen.",
+            "visualCue": "長いペン"
+          },
+          {
+            "id": "s1-l1-q11",
+            "question": "Is this a pen? Is this a pen?",
+            "hint": "No / Pencil",
+            "expectedAnswer": "No, it isn't a pen, but it's a pencil.",
+            "visualCue": "鉛筆の絵"
+          },
+          {
+            "id": "s1-l1-q12",
+            "question": "Is this a table? Is this a table?",
+            "hint": "No / Chair",
+            "expectedAnswer": "No, it isn't a table, but it's a chair.",
+            "visualCue": "椅子の絵"
+          },
+          {
+            "id": "s1-l1-q13",
+            "question": "Is this a book? Is this a book?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, it's a book.",
+            "visualCue": "本の絵"
+          },
+          {
+            "id": "s1-l1-q14",
+            "question": "Is this a small box? Is this a small box?",
+            "hint": "No / Large box",
+            "expectedAnswer": "No, it isn't a small box, but it's a large box.",
+            "visualCue": "大きい箱の絵"
+          },
+          {
+            "id": "s1-l1-q15",
+            "question": "Is this pen black? Is this pen black?",
+            "hint": "No / Red",
+            "expectedAnswer": "No, it isn't black, but it's red.",
+            "visualCue": "赤いペンの絵"
+          },
+          {
+            "id": "s1-l1-q16",
+            "question": "Is this chair blue? Is this chair blue?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, it's blue.",
+            "visualCue": "青い椅子の絵"
+          },
+          {
+            "id": "s1-l1-q17",
+            "question": "Is this a long pencil? Is this a long pencil?",
+            "hint": "No / Short pencil",
+            "expectedAnswer": "No, it isn't a long pencil, but it's a short pencil.",
+            "visualCue": "短い鉛筆の絵"
+          },
+          {
+            "id": "s1-l1-q18",
+            "question": "Is this a white book? Is this a white book?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, it's a white book.",
+            "visualCue": "白い本の絵"
+          },
+          {
+            "id": "s1-l1-q19",
+            "question": "Is this table small? Is this table small?",
+            "hint": "No / Large",
+            "expectedAnswer": "No, it isn't small, but it's large.",
+            "visualCue": "大きいテーブルの絵"
+          },
+          {
+            "id": "s1-l1-q20",
+            "question": "Is this a green box? Is this a green box?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, it's a green box.",
+            "visualCue": "緑の箱の絵"
+          }
+        ]
+      },
+      "2": {
+        "name": "Lesson 2: Locations & Prepositions",
+        "questions": [
+          {
+            "id": "s1-l2-q1",
+            "question": "Is the book on the table? Is the book on the table?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, it's on the table.",
+            "visualCue": "机の上の本"
+          },
+          {
+            "id": "s1-l2-q2",
+            "question": "Is the student standing under the table? Is the student standing under the table?",
+            "hint": "No / Sitting on a chair",
+            "expectedAnswer": "No, the student isn't standing under the table, but he's sitting on a chair.",
+            "visualCue": "椅子に座る生徒"
+          },
+          {
+            "id": "s1-l2-q3",
+            "question": "Is the teacher sitting in front of the window? Is the teacher sitting in front of the window?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, he's sitting in front of the window.",
+            "visualCue": "窓の前の先生"
+          },
+          {
+            "id": "s1-l2-q4",
+            "question": "Is the pen behind the book? Is the pen behind the book?",
+            "hint": "No / On the book",
+            "expectedAnswer": "No, it isn't behind the book, but it's on the book.",
+            "visualCue": "本の上のペン"
+          },
+          {
+            "id": "s1-l2-q5",
+            "question": "Are you standing? Are you standing?",
+            "hint": "No / Sitting",
+            "expectedAnswer": "No, I'm not standing, but I'm sitting.",
+            "visualCue": "座っている人"
+          },
+          {
+            "id": "s1-l2-q6",
+            "question": "Is the window behind the table? Is the window behind the table?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, it's behind the table.",
+            "visualCue": "テーブルの後ろの窓"
+          },
+          {
+            "id": "s1-l2-q7",
+            "question": "Is the table in front of the window? Is the table in front of the window?",
+            "hint": "No / In front of the wall",
+            "expectedAnswer": "No, it isn't in front of the window, but it's in front of the wall.",
+            "visualCue": "壁の前のテーブル"
+          },
+          {
+            "id": "s1-l2-q8",
+            "question": "Is the student on the teacher's chair? Is the student on the teacher's chair?",
+            "hint": "No / On his own chair",
+            "expectedAnswer": "No, the student isn't on the teacher's chair, but he's on his chair.",
+            "visualCue": "自分の椅子に座る生徒"
+          },
+          {
+            "id": "s1-l2-q9",
+            "question": "Am I standing? Am I standing?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, you're standing.",
+            "visualCue": "立っている先生"
+          },
+          {
+            "id": "s1-l2-q10",
+            "question": "Is your pen under the table? Is your pen under the table?",
+            "hint": "No / On the table",
+            "expectedAnswer": "No, my pen isn't under the table, but it's on the table.",
+            "visualCue": "机の上のペン"
+          },
+          {
+            "id": "s1-l2-q11",
+            "question": "Am I standing? Am I standing?",
+            "hint": "No / Sitting",
+            "expectedAnswer": "No, you aren't standing, but you're sitting.",
+            "visualCue": "椅子に座る先生"
+          },
+          {
+            "id": "s1-l2-q12",
+            "question": "Am I sitting? Am I sitting?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, you're sitting.",
+            "visualCue": "椅子に座る先生"
+          },
+          {
+            "id": "s1-l2-q13",
+            "question": "Is the book under the table? Is the book under the table?",
+            "hint": "No / On table",
+            "expectedAnswer": "No, it isn't under the table, but it's on the table.",
+            "visualCue": "机の上の本"
+          },
+          {
+            "id": "s1-l2-q14",
+            "question": "Is the book on the table? Is the book on the table?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, it's on the table.",
+            "visualCue": "机の上の本"
+          },
+          {
+            "id": "s1-l2-q15",
+            "question": "Am I standing in front of the window? Am I standing in front of the window?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, you're standing in front of the window.",
+            "visualCue": "窓の前の先生"
+          },
+          {
+            "id": "s1-l2-q16",
+            "question": "Is the student standing behind the table? Is the student standing behind the table?",
+            "hint": "No / Sitting in front",
+            "expectedAnswer": "No, he isn't standing behind the table, but he's sitting in front of the table.",
+            "visualCue": "机の前の生徒"
+          },
+          {
+            "id": "s1-l2-q17",
+            "question": "Is the pen in your hand? Is the pen in your hand?",
+            "hint": "No / On table",
+            "expectedAnswer": "No, it isn't in my hand, but it's on the table.",
+            "visualCue": "机の上のペン"
+          },
+          {
+            "id": "s1-l2-q18",
+            "question": "Is the teacher standing in front of the table? Is the teacher standing in front of the table?",
+            "hint": "No / Behind table",
+            "expectedAnswer": "No, he isn't standing in front of the table, but he's standing behind the table.",
+            "visualCue": "机の後ろの先生"
+          },
+          {
+            "id": "s1-l2-q19",
+            "question": "Are you sitting behind the table? Are you sitting behind the table?",
+            "hint": "No / In front",
+            "expectedAnswer": "No, I'm not sitting behind the table, but I'm sitting in front of the table.",
+            "visualCue": "机の前の生徒"
+          },
+          {
+            "id": "s1-l2-q20",
+            "question": "Is the window behind me? Is the window behind me?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, it's behind you.",
+            "visualCue": "先生の後ろの窓"
+          }
+        ]
+      },
+      "3": {
+        "name": "Lesson 3: Plurals & Pronouns",
+        "questions": [
+          {
+            "id": "s1-l3-q1",
+            "question": "Are these books? Are these books?",
+            "hint": "No / Notebooks",
+            "expectedAnswer": "No, they aren't books, but they're notebooks.",
+            "visualCue": "複数のノートを指す手"
+          },
+          {
+            "id": "s1-l3-q2",
+            "question": "Are those boxes? Are those boxes?",
+            "hint": "No / Books",
+            "expectedAnswer": "No, they aren't boxes, but they're books.",
+            "visualCue": "遠くの複数の本"
+          },
+          {
+            "id": "s1-l3-q3",
+            "question": "Are the windows open? Are the windows open?",
+            "hint": "No / Shut",
+            "expectedAnswer": "No, they aren't open, but they're shut.",
+            "visualCue": "閉じた窓"
+          },
+          {
+            "id": "s1-l3-q4",
+            "question": "Are the doors shut? Are the doors shut?",
+            "hint": "No / Open",
+            "expectedAnswer": "No, they aren't shut, but they're open.",
+            "visualCue": "開いたドア"
+          },
+          {
+            "id": "s1-l3-q5",
+            "question": "Are these boxes? Are these boxes?",
+            "hint": "No / Books",
+            "expectedAnswer": "No, they aren't boxes, but they're books.",
+            "visualCue": "手元の複数の本"
+          },
+          {
+            "id": "s1-l3-q6",
+            "question": "Are those notebooks? Are those notebooks?",
+            "hint": "No / Boxes",
+            "expectedAnswer": "No, they aren't notebooks, but they're boxes.",
+            "visualCue": "遠くの複数の箱"
+          },
+          {
+            "id": "s1-l3-q7",
+            "question": "What are these? What are these?",
+            "hint": "Notebooks",
+            "expectedAnswer": "They're notebooks.",
+            "visualCue": "手元の複数のノート"
+          },
+          {
+            "id": "s1-l3-q8",
+            "question": "What are those? What are those?",
+            "hint": "Books",
+            "expectedAnswer": "They're books.",
+            "visualCue": "遠くの複数の本"
+          },
+          {
+            "id": "s1-l3-q9",
+            "question": "Are the windows shut? Are the windows shut?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, they're shut.",
+            "visualCue": "閉じた窓"
+          },
+          {
+            "id": "s1-l3-q10",
+            "question": "Are the doors open? Are the doors open?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, they're open.",
+            "visualCue": "開いたドア"
+          },
+          {
+            "id": "s1-l3-q11",
+            "question": "Are these books? Are these books?",
+            "hint": "No / Notebooks",
+            "expectedAnswer": "No, they aren't books, but they're notebooks.",
+            "visualCue": "開いたノート複数"
+          },
+          {
+            "id": "s1-l3-q12",
+            "question": "Are those books? Are those books?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, those are books.",
+            "visualCue": "遠くの本棚"
+          },
+          {
+            "id": "s1-l3-q13",
+            "question": "Are these notebooks? Are these notebooks?",
+            "hint": "No / Books",
+            "expectedAnswer": "No, they aren't notebooks, but they're books.",
+            "visualCue": "机の上の本数冊"
+          },
+          {
+            "id": "s1-l3-q14",
+            "question": "Are these boxes? Are these boxes?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, these are boxes.",
+            "visualCue": "箱がいくつか"
+          },
+          {
+            "id": "s1-l3-q15",
+            "question": "Are those windows? Are those windows?",
+            "hint": "No / Doors",
+            "expectedAnswer": "No, they aren't windows, but they're doors.",
+            "visualCue": "遠くのドア複数"
+          },
+          {
+            "id": "s1-l3-q16",
+            "question": "Are these doors open or shut? Are these doors open or shut?",
+            "hint": "Open",
+            "expectedAnswer": "They're open.",
+            "visualCue": "開いたドア複数"
+          },
+          {
+            "id": "s1-l3-q17",
+            "question": "Are those windows open? Are those windows open?",
+            "hint": "No / Shut",
+            "expectedAnswer": "No, they aren't open, but they're shut.",
+            "visualCue": "閉まった窓複数"
+          },
+          {
+            "id": "s1-l3-q18",
+            "question": "Are these books on the table? Are these books on the table?",
+            "hint": "No / Floor",
+            "expectedAnswer": "No, they aren't on the table, but they're on the floor.",
+            "visualCue": "床にある本複数"
+          },
+          {
+            "id": "s1-l3-q19",
+            "question": "Are these notebooks? Are these notebooks?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, these are notebooks.",
+            "visualCue": "ノートの束"
+          },
+          {
+            "id": "s1-l3-q20",
+            "question": "Are those boxes big? Are those boxes big?",
+            "hint": "No / Small",
+            "expectedAnswer": "No, they aren't big, but they're small.",
+            "visualCue": "小さな箱複数"
+          }
+        ]
+      }
+    }
+  },
+  "2": {
+    "name": "Stage 2: Elementary",
+    "description": "現在進行形（Doing）、所有代名詞（Mine, Yours）、一般動詞の基本と否定・疑問文",
+    "lessons": {
+      "1": {
+        "name": "Lesson 1: Present Continuous Actions",
+        "questions": [
+          {
+            "id": "s2-l1-q1",
+            "question": "Am I standing? Am I standing?",
+            "hint": "No / Sitting",
+            "expectedAnswer": "No, you aren't standing, but you're sitting.",
+            "visualCue": "先生が座っている"
+          },
+          {
+            "id": "s2-l1-q2",
+            "question": "Are you standing? Are you standing?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, I'm standing.",
+            "visualCue": "生徒が立っている"
+          },
+          {
+            "id": "s2-l1-q3",
+            "question": "Am I writing? Am I writing?",
+            "hint": "No / Speaking English",
+            "expectedAnswer": "No, you aren't writing, but you're speaking English.",
+            "visualCue": "先生が話している"
+          },
+          {
+            "id": "s2-l1-q4",
+            "question": "Are you speaking English? Are you speaking English?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, I'm speaking English.",
+            "visualCue": "生徒が話している"
+          },
+          {
+            "id": "s2-l1-q5",
+            "question": "Are you listening to me? Are you listening to me?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, I'm listening to the teacher.",
+            "visualCue": "生徒が聞いている"
+          },
+          {
+            "id": "s2-l1-q6",
+            "question": "Are you writing a letter? Are you writing a letter?",
+            "hint": "No / Answering a question",
+            "expectedAnswer": "No, I'm not writing a letter, but I'm answering a question.",
+            "visualCue": "生徒が答えている"
+          },
+          {
+            "id": "s2-l1-q7",
+            "question": "Am I reading a book? Am I reading a book?",
+            "hint": "No / Walking",
+            "expectedAnswer": "No, you aren't reading a book, but you're walking.",
+            "visualCue": "先生が歩いている"
+          },
+          {
+            "id": "s2-l1-q8",
+            "question": "Are you standing? Are you standing?",
+            "hint": "No / Sitting",
+            "expectedAnswer": "No, I'm not standing, but I'm sitting.",
+            "visualCue": "生徒が座っている"
+          },
+          {
+            "id": "s2-l1-q9",
+            "question": "Am I speaking English? Am I speaking English?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, you're speaking English.",
+            "visualCue": "先生が話している"
+          },
+          {
+            "id": "s2-l1-q10",
+            "question": "Are you drawing a picture? Are you drawing a picture?",
+            "hint": "No / Writing",
+            "expectedAnswer": "No, I'm not drawing a picture, but I'm writing.",
+            "visualCue": "生徒が書いている"
+          },
+          {
+            "id": "s2-l1-q11",
+            "question": "Is the teacher sitting? Is the teacher sitting?",
+            "hint": "No / Standing",
+            "expectedAnswer": "No, the teacher isn't sitting, but he's standing.",
+            "visualCue": "立っている先生"
+          },
+          {
+            "id": "s2-l1-q12",
+            "question": "Are you sitting? Are you sitting?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, I'm sitting.",
+            "visualCue": "座る生徒"
+          },
+          {
+            "id": "s2-l1-q13",
+            "question": "Am I speaking Japanese? Am I speaking Japanese?",
+            "hint": "No / English",
+            "expectedAnswer": "No, you aren't speaking Japanese, but you're speaking English.",
+            "visualCue": "英語を話す先生"
+          },
+          {
+            "id": "s2-l1-q14",
+            "question": "Are you listening to the teacher? Are you listening to the teacher?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, I'm listening to the teacher.",
+            "visualCue": "先生を聞く生徒"
+          },
+          {
+            "id": "s2-l1-q15",
+            "question": "Am I writing? Am I writing?",
+            "hint": "No / Speaking",
+            "expectedAnswer": "No, you aren't writing, but you're speaking English.",
+            "visualCue": "話す先生"
+          },
+          {
+            "id": "s2-l1-q16",
+            "question": "What are you doing? What are you doing?",
+            "hint": "Speaking English",
+            "expectedAnswer": "I'm speaking English.",
+            "visualCue": "話す生徒"
+          },
+          {
+            "id": "s2-l1-q17",
+            "question": "Are you writing? Are you writing?",
+            "hint": "No / Speaking",
+            "expectedAnswer": "No, I'm not writing, but I'm speaking English.",
+            "visualCue": "書かない生徒"
+          },
+          {
+            "id": "s2-l1-q18",
+            "question": "Are you speaking English? Are you speaking English?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, I'm speaking English.",
+            "visualCue": "英語を話す生徒"
+          },
+          {
+            "id": "s2-l1-q19",
+            "question": "Is the teacher listening to you? Is the teacher listening to you?",
+            "hint": "No / Speaking",
+            "expectedAnswer": "No, the teacher isn't listening to me, but he's speaking English.",
+            "visualCue": "話す先生"
+          },
+          {
+            "id": "s2-l1-q20",
+            "question": "Are you standing? Are you standing?",
+            "hint": "No / Sitting",
+            "expectedAnswer": "No, I'm not standing, but I'm sitting.",
+            "visualCue": "座る生徒"
+          }
+        ]
+      },
+      "2": {
+        "name": "Lesson 2: Possessive Pronouns",
+        "questions": [
+          {
+            "id": "s2-l2-q1",
+            "question": "Is this your coat? Is this your coat?",
+            "hint": "No / Her coat",
+            "expectedAnswer": "No, it isn't my coat, but it's her coat.",
+            "visualCue": "女性のコート"
+          },
+          {
+            "id": "s2-l2-q2",
+            "question": "Is this your coat? Is this your coat?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, it's my coat.",
+            "visualCue": "自分のコート"
+          },
+          {
+            "id": "s2-l2-q3",
+            "question": "Are these his pencils? Are these his pencils?",
+            "hint": "No / Her pencils",
+            "expectedAnswer": "No, they aren't his pencils, but they're her pencils.",
+            "visualCue": "女の子の鉛筆"
+          },
+          {
+            "id": "s2-l2-q4",
+            "question": "Are these her pencils? Are these her pencils?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, they're her pencils.",
+            "visualCue": "女の子の鉛筆"
+          },
+          {
+            "id": "s2-l2-q5",
+            "question": "Is this our classroom? Is this our classroom?",
+            "hint": "No / Their classroom",
+            "expectedAnswer": "No, it isn't our classroom, but it's their classroom.",
+            "visualCue": "他の教室"
+          },
+          {
+            "id": "s2-l2-q6",
+            "question": "Is this our classroom? Is this our classroom?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, it's our classroom.",
+            "visualCue": "今の教室"
+          },
+          {
+            "id": "s2-l2-q7",
+            "question": "Are these her pencils? Are these her pencils?",
+            "hint": "No / Mine",
+            "expectedAnswer": "No, they aren't her pencils, but they're mine.",
+            "visualCue": "生徒の鉛筆"
+          },
+          {
+            "id": "s2-l2-q8",
+            "question": "Is this yours? Is this yours?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, it's mine.",
+            "visualCue": "生徒のバッグ"
+          },
+          {
+            "id": "s2-l2-q9",
+            "question": "Is this his coat? Is this his coat?",
+            "hint": "No / Hers",
+            "expectedAnswer": "No, it isn't his coat, but it's hers.",
+            "visualCue": "女性のコート"
+          },
+          {
+            "id": "s2-l2-q10",
+            "question": "Are these ours? Are these ours?",
+            "hint": "No / Theirs",
+            "expectedAnswer": "No, they aren't ours, but they're theirs.",
+            "visualCue": "他グループのペン"
+          },
+          {
+            "id": "s2-l2-q11",
+            "question": "Is this coat yours? Is this coat yours?",
+            "hint": "No / mine",
+            "expectedAnswer": "No, it isn't mine, but it's hers.",
+            "visualCue": "女子のコート"
+          },
+          {
+            "id": "s2-l2-q12",
+            "question": "Are these pencils yours? Are these pencils yours?",
+            "hint": "No / mine",
+            "expectedAnswer": "No, they aren't mine, but they're his.",
+            "visualCue": "男子の鉛筆"
+          },
+          {
+            "id": "s2-l2-q13",
+            "question": "Is this classroom ours? Is this classroom ours?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, this classroom is ours.",
+            "visualCue": "教室"
+          },
+          {
+            "id": "s2-l2-q14",
+            "question": "Is this coat his? Is this coat his?",
+            "hint": "No / hers",
+            "expectedAnswer": "No, it isn't his, but it's hers.",
+            "visualCue": "女子のコート"
+          },
+          {
+            "id": "s2-l2-q15",
+            "question": "Are these pencils hers? Are these pencils hers?",
+            "hint": "No / yours",
+            "expectedAnswer": "No, they aren't hers, but they're yours.",
+            "visualCue": "先生の鉛筆"
+          },
+          {
+            "id": "s2-l2-q16",
+            "question": "Is this classroom ours? Is this classroom ours?",
+            "hint": "No / theirs",
+            "expectedAnswer": "No, it isn't ours, but it's theirs.",
+            "visualCue": "他の教室"
+          },
+          {
+            "id": "s2-l2-q17",
+            "question": "Is this coat hers? Is this coat hers?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, it's mine.",
+            "visualCue": "女子のコート"
+          },
+          {
+            "id": "s2-l2-q18",
+            "question": "Are these pencils yours? Are these pencils yours?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, they're mine.",
+            "visualCue": "生徒の鉛筆"
+          },
+          {
+            "id": "s2-l2-q19",
+            "question": "Is this coat mine? Is this coat mine?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, it's yours.",
+            "visualCue": "生徒のコート"
+          },
+          {
+            "id": "s2-l2-q20",
+            "question": "Are those pencils ours? Are those pencils ours?",
+            "hint": "No / theirs",
+            "expectedAnswer": "No, they aren't ours, but they're theirs.",
+            "visualCue": "複数の鉛筆"
+          }
+        ]
+      },
+      "3": {
+        "name": "Lesson 3: Present Simple & General Actions (一般動詞・時間)",
+        "questions": [
+          {
+            "id": "s2-l3-q1",
+            "question": "Do you live in Tokyo? Do you live in Tokyo?",
+            "hint": "No / Osaka",
+            "expectedAnswer": "No, I don't live in Tokyo, but I live in Osaka.",
+            "visualCue": "大阪の街並み"
+          },
+          {
+            "id": "s2-l3-q2",
+            "question": "Do you speak English? Do you speak English?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, I speak English.",
+            "visualCue": "英語を話す人"
+          },
+          {
+            "id": "s2-l3-q3",
+            "question": "Do you like coffee? Do you like coffee?",
+            "hint": "No / Tea",
+            "expectedAnswer": "No, I don't like coffee, but I like tea.",
+            "visualCue": "コーヒーカップ"
+          },
+          {
+            "id": "s2-l3-q4",
+            "question": "Do you come to school by car? Do you come to school by car?",
+            "hint": "No / Train",
+            "expectedAnswer": "No, I don't come to school by car, but I come by train.",
+            "visualCue": "電車に乗る人"
+          },
+          {
+            "id": "s2-l3-q5",
+            "question": "Is it ten o'clock now? Is it ten o'clock now?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, it's ten o'clock now.",
+            "visualCue": "時計が10時"
+          },
+          {
+            "id": "s2-l3-q6",
+            "question": "Do you wear a clock on your wrist? Do you wear a clock on your wrist?",
+            "hint": "No / Watch",
+            "expectedAnswer": "No, I don't wear a clock on my wrist, but I wear a watch.",
+            "visualCue": "腕時計をはめる手"
+          },
+          {
+            "id": "s2-l3-q7",
+            "question": "Does a day have twenty hours? Does a day have twenty hours?",
+            "hint": "No / Twenty-four",
+            "expectedAnswer": "No, a day doesn't have twenty hours, but it has twenty-four hours.",
+            "visualCue": "地球と太陽"
+          },
+          {
+            "id": "s2-l3-q8",
+            "question": "Does an hour have sixty minutes? Does an hour have sixty minutes?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, an hour has sixty minutes.",
+            "visualCue": "アナログ時計の分針"
+          },
+          {
+            "id": "s2-l3-q9",
+            "question": "Does a minute have thirty seconds? Does a minute have thirty seconds?",
+            "hint": "No / Sixty",
+            "expectedAnswer": "No, a minute doesn't have thirty seconds, but it has sixty seconds.",
+            "visualCue": "ストップウォッチ"
+          },
+          {
+            "id": "s2-l3-q10",
+            "question": "Do you go to bed early every day? Do you go to bed early every day?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, I go to bed early every day.",
+            "visualCue": "ベッドで寝る人"
+          },
+          {
+            "id": "s2-l3-q11",
+            "question": "Is this a clock? Is this a clock?",
+            "hint": "No / Watch",
+            "expectedAnswer": "No, it isn't a clock, but it's a watch.",
+            "visualCue": "腕時計"
+          },
+          {
+            "id": "s2-l3-q12",
+            "question": "Do you wear a watch? Do you wear a watch?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, I wear a watch.",
+            "visualCue": "腕時計をしている腕"
+          },
+          {
+            "id": "s2-l3-q13",
+            "question": "Do you live in a big city? Do you live in a big city?",
+            "hint": "No / Small town",
+            "expectedAnswer": "No, I don't live in a big city, but I live in a small town.",
+            "visualCue": "小さな町の風景"
+          },
+          {
+            "id": "s2-l3-q14",
+            "question": "Does a dog speak English? Does a dog speak English?",
+            "hint": "No / Barks",
+            "expectedAnswer": "No, a dog doesn't speak English, but it barks.",
+            "visualCue": "吠えている犬"
+          },
+          {
+            "id": "s2-l3-q15",
+            "question": "Do you like to eat pizza? Do you like to eat pizza?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, I like to eat pizza.",
+            "visualCue": "ピザを食べる人"
+          },
+          {
+            "id": "s2-l3-q16",
+            "question": "Do you come to school by bus? Do you come to school by bus?",
+            "hint": "No / Train",
+            "expectedAnswer": "No, I don't come to school by bus, but I come by train.",
+            "visualCue": "電車に乗る人"
+          },
+          {
+            "id": "s2-l3-q17",
+            "question": "Does a day have fifty hours? Does a day have fifty hours?",
+            "hint": "No / Twenty-four hours",
+            "expectedAnswer": "No, a day doesn't have fifty hours, but it has twenty-four hours.",
+            "visualCue": "24時間時計の文字盤"
+          },
+          {
+            "id": "s2-l3-q18",
+            "question": "Do we go to sleep in the morning? Do we go to sleep in the morning?",
+            "hint": "No / At night",
+            "expectedAnswer": "No, we don't go to sleep in the morning, but we go to sleep at night.",
+            "visualCue": "寝ている人 (夜)"
+          },
+          {
+            "id": "s2-l3-q19",
+            "question": "Does a minute have sixty seconds? Does a minute have sixty seconds?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, a minute has sixty seconds.",
+            "visualCue": "時計の秒針"
+          },
+          {
+            "id": "s2-l3-q20",
+            "question": "Does the sun come up in the morning? Does the sun come up in the morning?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, the sun comes up in the morning.",
+            "visualCue": "朝日が昇る"
+          }
+        ]
+      }
+    }
+  },
+  "3": {
+    "name": "Stage 3: Pre-Intermediate",
+    "description": "比較級（Bigger than）、最上級・頻度の副詞、命令形・数量詞",
+    "lessons": {
+      "1": {
+        "name": "Lesson 1: Comparatives (比較級)",
+        "questions": [
+          {
+            "id": "s3-l1-q1",
+            "question": "Is a fly bigger than a dog? Is a fly bigger than a dog?",
+            "hint": "No / Smaller",
+            "expectedAnswer": "No, a fly isn't bigger than a dog, but it's smaller than a dog.",
+            "visualCue": "犬とハエ"
+          },
+          {
+            "id": "s3-l1-q2",
+            "question": "Is this door wider than that window? Is this door wider than that window?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, it's wider than that window.",
+            "visualCue": "ドアと窓"
+          },
+          {
+            "id": "s3-l1-q3",
+            "question": "Is London smaller than Paris? Is London smaller than Paris?",
+            "hint": "No / Bigger",
+            "expectedAnswer": "No, London isn't smaller than Paris, but it's bigger than Paris.",
+            "visualCue": "ロンドンとパリの地図"
+          },
+          {
+            "id": "s3-l1-q4",
+            "question": "Is this pen longer than this book? Is this pen longer than this book?",
+            "hint": "No / Shorter",
+            "expectedAnswer": "No, this pen isn't longer than this book, but it's shorter than this book.",
+            "visualCue": "本とペン"
+          },
+          {
+            "id": "s3-l1-q5",
+            "question": "Is this table higher than this chair? Is this table higher than this chair?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, it's higher than this chair.",
+            "visualCue": "テーブルと椅子"
+          },
+          {
+            "id": "s3-l1-q6",
+            "question": "Is a bicycle wider than a car? Is a bicycle wider than a car?",
+            "hint": "No / Narrower",
+            "expectedAnswer": "No, a bicycle isn't wider than a car, but it's narrower than a car.",
+            "visualCue": "車と自転車"
+          },
+          {
+            "id": "s3-l1-q7",
+            "question": "Is a river wider than a stream? Is a river wider than a stream?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, a river's wider than a stream.",
+            "visualCue": "川と小川"
+          },
+          {
+            "id": "s3-l1-q8",
+            "question": "Is a mouse bigger than an elephant? Is a mouse bigger than an elephant?",
+            "hint": "No / Smaller",
+            "expectedAnswer": "No, a mouse isn't bigger than an elephant, but it's smaller than an elephant.",
+            "visualCue": "象とねずみ"
+          },
+          {
+            "id": "s3-l1-q9",
+            "question": "Is your room bigger than this room? Is your room bigger than this room?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, my room's bigger than this room.",
+            "visualCue": "部屋を指す人"
+          },
+          {
+            "id": "s3-l1-q10",
+            "question": "Is this book thinner than that notebook? Is this book thinner than that notebook?",
+            "hint": "No / Thicker",
+            "expectedAnswer": "No, this book isn't thinner than that notebook, but it's thicker than that notebook.",
+            "visualCue": "本とノート"
+          },
+          {
+            "id": "s3-l1-q11",
+            "question": "Is a fly bigger than a dog? Is a fly bigger than a dog?",
+            "hint": "No / smaller",
+            "expectedAnswer": "No, a fly isn't bigger than a dog, but it's smaller than a dog.",
+            "visualCue": "ハエと犬"
+          },
+          {
+            "id": "s3-l1-q12",
+            "question": "Is your book wider than this table? Is your book wider than this table?",
+            "hint": "No / narrower",
+            "expectedAnswer": "No, my book isn't wider than this table, but it's narrower than this table.",
+            "visualCue": "本とテーブル"
+          },
+          {
+            "id": "s3-l1-q13",
+            "question": "Is this pencil longer than your finger? Is this pencil longer than your finger?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, it's longer than my finger.",
+            "visualCue": "鉛筆と指"
+          },
+          {
+            "id": "s3-l1-q14",
+            "question": "Is Paris a bigger city than London? Is Paris a bigger city than London?",
+            "hint": "No / smaller",
+            "expectedAnswer": "No, Paris isn't a bigger city than London, but it's a smaller city than London.",
+            "visualCue": "ロンドンとパリの地図"
+          },
+          {
+            "id": "s3-l1-q15",
+            "question": "Is a door wider than a window? Is a door wider than a window?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, it's wider than a window.",
+            "visualCue": "ドアと窓"
+          },
+          {
+            "id": "s3-l1-q16",
+            "question": "Is a short ruler longer than a meter ruler? Is a short ruler longer than a meter ruler?",
+            "hint": "No / shorter",
+            "expectedAnswer": "No, a short ruler isn't longer than a meter ruler, but it's shorter than a meter ruler.",
+            "visualCue": "短い定規と長い定規"
+          },
+          {
+            "id": "s3-l1-q17",
+            "question": "Is an elephant bigger than a mouse? Is an elephant bigger than a mouse?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, it's bigger than a mouse.",
+            "visualCue": "象とねずみ"
+          },
+          {
+            "id": "s3-l1-q18",
+            "question": "Is a path wider than a road? Is a path wider than a road?",
+            "hint": "No / narrower",
+            "expectedAnswer": "No, a path isn't wider than a road, but it's narrower than a road.",
+            "visualCue": "道と小道"
+          },
+          {
+            "id": "s3-l1-q19",
+            "question": "Is your hair longer than your arm? Is your hair longer than your arm?",
+            "hint": "No / shorter",
+            "expectedAnswer": "No, my hair isn't longer than my arm, but it's shorter than my arm.",
+            "visualCue": "髪の毛と腕"
+          },
+          {
+            "id": "s3-l1-q20",
+            "question": "Is a pen smaller than a book? Is a pen smaller than a book?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, it's smaller than a book.",
+            "visualCue": "ペンと本"
+          }
+        ]
+      },
+      "2": {
+        "name": "Lesson 2: Superlatives & Frequency Adverbs (最上級・頻度)",
+        "questions": [
+          {
+            "id": "s3-l2-q1",
+            "question": "Is London the biggest city in Europe? Is London the biggest city in Europe?",
+            "hint": "No / Moscow",
+            "expectedAnswer": "No, London isn't the biggest city in Europe, but Moscow's the biggest city in Europe.",
+            "visualCue": "ロンドンの街並み"
+          },
+          {
+            "id": "s3-l2-q2",
+            "question": "What's the most expensive item in your bag? What's the most expensive item in your bag?",
+            "hint": "My phone",
+            "expectedAnswer": "My phone's the most expensive item in my bag.",
+            "visualCue": "カバンの中の携帯"
+          },
+          {
+            "id": "s3-l2-q3",
+            "question": "Do you always eat sugar with your coffee? Do you always eat sugar with your coffee?",
+            "hint": "No / never",
+            "expectedAnswer": "No, I don't always eat sugar with my coffee, but I never eat sugar with my coffee.",
+            "visualCue": "コーヒーと砂糖"
+          },
+          {
+            "id": "s3-l2-q4",
+            "question": "Do you sometimes eat out at a restaurant? Do you sometimes eat out at a restaurant?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, I sometimes eat out at a restaurant.",
+            "visualCue": "レストランで食事"
+          },
+          {
+            "id": "s3-l2-q5",
+            "question": "Is your shirt the most expensive item of clothing you're wearing? Is your shirt the most expensive item of clothing you're wearing?",
+            "hint": "No / shoes",
+            "expectedAnswer": "No, my shirt isn't the most expensive item of clothing I'm wearing, but my shoes are.",
+            "visualCue": "シャツを着ている人"
+          },
+          {
+            "id": "s3-l2-q6",
+            "question": "Do you rarely watch TV? Do you rarely watch TV?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, I rarely watch TV.",
+            "visualCue": "テレビを見る人"
+          },
+          {
+            "id": "s3-l2-q7",
+            "question": "Is this chair the biggest object in this room? Is this chair the biggest object in this room?",
+            "hint": "No / table",
+            "expectedAnswer": "No, this chair isn't the biggest object in this room, but the table's.",
+            "visualCue": "部屋の椅子とテーブル"
+          },
+          {
+            "id": "s3-l2-q8",
+            "question": "Do you always drink water with your meals? Do you always drink water with your meals?",
+            "hint": "No / sometimes",
+            "expectedAnswer": "No, I don't always drink water with my meals, but I sometimes drink water with my meals.",
+            "visualCue": "食事と水"
+          },
+          {
+            "id": "s3-l2-q9",
+            "question": "What's the most important thing for learning English? What's the most important thing for learning English?",
+            "hint": "Practice",
+            "expectedAnswer": "Practice's the most important thing for learning English.",
+            "visualCue": "英語の教科書"
+          },
+          {
+            "id": "s3-l2-q10",
+            "question": "Do you always go to bed before midnight? Do you always go to bed before midnight?",
+            "hint": "No / sometimes",
+            "expectedAnswer": "No, I don't always go to bed before midnight, but I sometimes go to bed before midnight.",
+            "visualCue": "夜中にベッドにいる人"
+          },
+          {
+            "id": "s3-l2-q11",
+            "question": "Is London the biggest city in the world? Is London the biggest city in the world?",
+            "hint": "No / Tokyo",
+            "expectedAnswer": "No, London isn't the biggest city in the world, but Tokyo is.",
+            "visualCue": "世界地図と東京"
+          },
+          {
+            "id": "s3-l2-q12",
+            "question": "Is a small car the most expensive type of car? Is a small car the most expensive type of car?",
+            "hint": "No / Luxury Car",
+            "expectedAnswer": "No, a small car isn't the most expensive type of car, but a luxury car is.",
+            "visualCue": "車２台"
+          },
+          {
+            "id": "s3-l2-q13",
+            "question": "Do you always come to school by car? Do you always come to school by car?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, I always come to school by car.",
+            "visualCue": "車に乗る人"
+          },
+          {
+            "id": "s3-l2-q14",
+            "question": "Do you sometimes eat meat for breakfast? Do you sometimes eat meat for breakfast?",
+            "hint": "No / Eggs",
+            "expectedAnswer": "No, I don't sometimes eat meat for breakfast, but I sometimes eat eggs.",
+            "visualCue": "朝食の皿"
+          },
+          {
+            "id": "s3-l2-q15",
+            "question": "Do you always eat sugar with your tea? Do you always eat sugar with your tea?",
+            "hint": "No / Rarely eat it",
+            "expectedAnswer": "No, I don't always eat sugar with my tea, but I rarely eat it.",
+            "visualCue": "砂糖と紅茶"
+          },
+          {
+            "id": "s3-l2-q16",
+            "question": "Is a cat the biggest animal in the world? Is a cat the biggest animal in the world?",
+            "hint": "No / Whale",
+            "expectedAnswer": "No, a cat isn't the biggest animal in the world, but a whale is.",
+            "visualCue": "猫とクジラ"
+          },
+          {
+            "id": "s3-l2-q17",
+            "question": "Do you rarely go to the cinema? Do you rarely go to the cinema?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, I rarely go to the cinema.",
+            "visualCue": "映画館の入口"
+          },
+          {
+            "id": "s3-l2-q18",
+            "question": "Is water the most expensive drink? Is water the most expensive drink?",
+            "hint": "No / Champagne",
+            "expectedAnswer": "No, water isn't the most expensive drink, but champagne is.",
+            "visualCue": "水とシャンパン"
+          },
+          {
+            "id": "s3-l2-q19",
+            "question": "Do you always wear a coat in summer? Do you always wear a coat in summer?",
+            "hint": "No / Winter",
+            "expectedAnswer": "No, I don't always wear a coat in summer, but I wear one in winter.",
+            "visualCue": "夏服の人"
+          },
+          {
+            "id": "s3-l2-q20",
+            "question": "Do you sometimes speak English at home? Do you sometimes speak English at home?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, I sometimes speak English at home.",
+            "visualCue": "家で話す人"
+          }
+        ]
+      },
+      "3": {
+        "name": "Lesson 3: Imperatives & Quantity (命令形・数量詞)",
+        "questions": [
+          {
+            "id": "s3-l3-q1",
+            "question": "Am I telling you to stand up? Am I telling you to stand up?",
+            "hint": "No / Sit down",
+            "expectedAnswer": "No, you aren't telling me to stand up, but you're telling me to sit down.",
+            "visualCue": "先生が座るよう指示"
+          },
+          {
+            "id": "s3-l3-q2",
+            "question": "Can we count the money? Can we count the money?",
+            "hint": "No / Cannot count coins",
+            "expectedAnswer": "No, we can't count the money, but we can count the coins.",
+            "visualCue": "お金とコインの山"
+          },
+          {
+            "id": "s3-l3-q3",
+            "question": "Do you have many pens? Do you have many pens?",
+            "hint": "No / Few",
+            "expectedAnswer": "No, I don't have many pens, but I've got a few.",
+            "visualCue": "少数のペン"
+          },
+          {
+            "id": "s3-l3-q4",
+            "question": "Is there much water in the sea? Is there much water in the sea?",
+            "hint": "Yes / A lot of",
+            "expectedAnswer": "Yes, there's a lot of water in the sea.",
+            "visualCue": "広大な海"
+          },
+          {
+            "id": "s3-l3-q5",
+            "question": "Does she tell him to open the door? Does she tell him to open the door?",
+            "hint": "No / Close door",
+            "expectedAnswer": "No, she doesn't tell him to open the door, but she tells him to close the door.",
+            "visualCue": "ドアを閉める男性と女性"
+          },
+          {
+            "id": "s3-l3-q6",
+            "question": "How many fingers have I got? How many fingers have I got?",
+            "hint": "Ten",
+            "expectedAnswer": "You've got ten fingers.",
+            "visualCue": "10本の指"
+          },
+          {
+            "id": "s3-l3-q7",
+            "question": "Have you got much time today? Have you got much time today?",
+            "hint": "No / A little",
+            "expectedAnswer": "No, I haven't got much time today, but I've got a little time.",
+            "visualCue": "時計と急いでいる人"
+          },
+          {
+            "id": "s3-l3-q8",
+            "question": "Can you count the hair on your head? Can you count the hair on your head?",
+            "hint": "No / Cannot count",
+            "expectedAnswer": "No, I can't count the hair on my head.",
+            "visualCue": "髪の毛を数える人"
+          },
+          {
+            "id": "s3-l3-q9",
+            "question": "Are there many students in the class? Are there many students in the class?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, there are many students in the class.",
+            "visualCue": "教室の多くの生徒"
+          },
+          {
+            "id": "s3-l3-q10",
+            "question": "Do you tell me to write my name? Do you tell me to write my name?",
+            "hint": "No / Read book",
+            "expectedAnswer": "No, you don't tell me to write my name, but you tell me to read my book.",
+            "visualCue": "本を読む生徒と先生"
+          },
+          {
+            "id": "s3-l3-q11",
+            "question": "Am I telling you to stand up? Am I telling you to stand up?",
+            "hint": "No / Sit down",
+            "expectedAnswer": "No, you aren't telling me to stand up, but you're telling me to sit down.",
+            "visualCue": "座っている生徒"
+          },
+          {
+            "id": "s3-l3-q12",
+            "question": "Am I telling you to close your book? Am I telling you to close your book?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, you're telling me to close my book.",
+            "visualCue": "本を閉じる手"
+          },
+          {
+            "id": "s3-l3-q13",
+            "question": "Can you count the sugar in your coffee? Can you count the sugar in your coffee?",
+            "hint": "No / Cannot count",
+            "expectedAnswer": "No, I can't count the sugar in my coffee, but I can count the spoons of sugar.",
+            "visualCue": "コーヒーと砂糖"
+          },
+          {
+            "id": "s3-l3-q14",
+            "question": "Can you count the fingers on your hand? Can you count the fingers on your hand?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, I can count the fingers on my hand.",
+            "visualCue": "自分の手"
+          },
+          {
+            "id": "s3-l3-q15",
+            "question": "Do you have many pencils in your bag? Do you have many pencils in your bag?",
+            "hint": "No / Few",
+            "expectedAnswer": "No, I don't have many pencils in my bag, but I have a few.",
+            "visualCue": "少ない鉛筆"
+          },
+          {
+            "id": "s3-l3-q16",
+            "question": "Is there a lot of water in the ocean? Is there a lot of water in the ocean?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, there's a lot of water in the ocean.",
+            "visualCue": "広い海"
+          },
+          {
+            "id": "s3-l3-q17",
+            "question": "Is there much money in your pocket? Is there much money in your pocket?",
+            "hint": "No / A little",
+            "expectedAnswer": "No, there isn't much money in my pocket, but there's a little.",
+            "visualCue": "小銭"
+          },
+          {
+            "id": "s3-l3-q18",
+            "question": "Are there many stars in the sky at night? Are there many stars in the sky at night?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, there are many stars in the sky at night.",
+            "visualCue": "夜空の星"
+          },
+          {
+            "id": "s3-l3-q19",
+            "question": "Do you drink much coffee every day? Do you drink much coffee every day?",
+            "hint": "No / Not much",
+            "expectedAnswer": "No, I don't drink much coffee every day, but I drink a lot of tea.",
+            "visualCue": "コーヒーカップ"
+          },
+          {
+            "id": "s3-l3-q20",
+            "question": "Are there few people in this city? Are there few people in this city?",
+            "hint": "No / Many",
+            "expectedAnswer": "No, there aren't few people in this city, but there are many.",
+            "visualCue": "賑やかな街"
+          }
+        ]
+      }
+    }
+  },
+  "4": {
+    "name": "Stage 4: Intermediate-Intro",
+    "description": "過去形・不規則動詞、現在完了形、条件文（if）",
+    "lessons": {
+      "1": {
+        "name": "Lesson 1: Past Simple & Irregular Verbs (過去形・不規則動詞)",
+        "questions": [
+          {
+            "id": "s4-l1-q1",
+            "question": "Did you watch TV last night? Did you watch TV last night?",
+            "hint": "No / read a book",
+            "expectedAnswer": "No, I didn't watch TV last night, but I read a book.",
+            "visualCue": "テレビと本"
+          },
+          {
+            "id": "s4-l1-q2",
+            "question": "Did you drink milk yesterday morning? Did you drink milk yesterday morning?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, I drank milk yesterday morning.",
+            "visualCue": "牛乳を飲む人"
+          },
+          {
+            "id": "s4-l1-q3",
+            "question": "Did you come to class late yesterday? Did you come to class late yesterday?",
+            "hint": "No / on time",
+            "expectedAnswer": "No, I didn't come to class late yesterday, but I came on time.",
+            "visualCue": "時計と教室"
+          },
+          {
+            "id": "s4-l1-q4",
+            "question": "Did you see a cat last night? Did you see a cat last night?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, I saw a cat last night.",
+            "visualCue": "夜の猫"
+          },
+          {
+            "id": "s4-l1-q5",
+            "question": "Did you eat dinner at a restaurant yesterday? Did you eat dinner at a restaurant yesterday?",
+            "hint": "No / at home",
+            "expectedAnswer": "No, I didn't eat dinner at a restaurant yesterday, but I ate it at home.",
+            "visualCue": "家とレストラン"
+          },
+          {
+            "id": "s4-l1-q6",
+            "question": "Did you study English last night? Did you study English last night?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, I studied English last night.",
+            "visualCue": "英語の本"
+          },
+          {
+            "id": "s4-l1-q7",
+            "question": "Did you go to bed early yesterday? Did you go to bed early yesterday?",
+            "hint": "No / late",
+            "expectedAnswer": "No, I didn't go to bed early yesterday, but I went late.",
+            "visualCue": "ベッドと時計"
+          },
+          {
+            "id": "s4-l1-q8",
+            "question": "Did I write on the table? Did I write on the table?",
+            "hint": "No / notebook",
+            "expectedAnswer": "No, you didn't write on the table, but you wrote in a notebook.",
+            "visualCue": "机とノート"
+          },
+          {
+            "id": "s4-l1-q9",
+            "question": "Did it rain yesterday? Did it rain yesterday?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, it rained yesterday.",
+            "visualCue": "雨が降る空"
+          },
+          {
+            "id": "s4-l1-q10",
+            "question": "Did you get up early this morning? Did you get up early this morning?",
+            "hint": "No / late",
+            "expectedAnswer": "No, I didn't get up early this morning, but I got up late.",
+            "visualCue": "朝起きる人"
+          },
+          {
+            "id": "s4-l1-q11",
+            "question": "Did you come to school yesterday? Did you come to school yesterday?",
+            "hint": "No / today",
+            "expectedAnswer": "No, I didn't come to school yesterday, but I came here today.",
+            "visualCue": "学校の門"
+          },
+          {
+            "id": "s4-l1-q12",
+            "question": "Did you watch TV last night? Did you watch TV last night?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, I watched TV last night.",
+            "visualCue": "テレビを見る人"
+          },
+          {
+            "id": "s4-l1-q13",
+            "question": "Did you drink coffee for breakfast this morning? Did you drink coffee for breakfast this morning?",
+            "hint": "No / tea",
+            "expectedAnswer": "No, I didn't drink coffee for breakfast this morning, but I drank tea.",
+            "visualCue": "コーヒーと紅茶"
+          },
+          {
+            "id": "s4-l1-q14",
+            "question": "Did you study English yesterday? Did you study English yesterday?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, I studied English yesterday.",
+            "visualCue": "英語の本"
+          },
+          {
+            "id": "s4-l1-q15",
+            "question": "Did you see a dog outside the window this morning? Did you see a dog outside the window this morning?",
+            "hint": "No / cat",
+            "expectedAnswer": "No, I didn't see a dog outside the window this morning, but I saw a cat.",
+            "visualCue": "窓の外の猫"
+          },
+          {
+            "id": "s4-l1-q16",
+            "question": "Did you clean your room last weekend? Did you clean your room last weekend?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, I cleaned my room last weekend.",
+            "visualCue": "掃除している人"
+          },
+          {
+            "id": "s4-l1-q17",
+            "question": "Did your friend come to your house last night? Did your friend come to your house last night?",
+            "hint": "No / this morning",
+            "expectedAnswer": "No, my friend didn't come to my house last night, but my friend came this morning.",
+            "visualCue": "友人がドアをノック"
+          },
+          {
+            "id": "s4-l1-q18",
+            "question": "Did you drink water after class yesterday? Did you drink water after class yesterday?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, I drank water after class yesterday.",
+            "visualCue": "水を飲む人"
+          },
+          {
+            "id": "s4-l1-q19",
+            "question": "Did you watch a movie at the cinema last night? Did you watch a movie at the cinema last night?",
+            "hint": "No / TV show",
+            "expectedAnswer": "No, I didn't watch a movie at the cinema last night, but I watched a TV show.",
+            "visualCue": "映画館とテレビ"
+          },
+          {
+            "id": "s4-l1-q20",
+            "question": "Did you see your teacher yesterday morning? Did you see your teacher yesterday morning?",
+            "hint": "No / this afternoon",
+            "expectedAnswer": "No, I didn't see my teacher yesterday morning, but I saw them this afternoon.",
+            "visualCue": "先生と生徒"
+          }
+        ]
+      },
+      "2": {
+        "name": "Lesson 2: Present Perfect (現在完了形)",
+        "questions": [
+          {
+            "id": "s4-l2-q1",
+            "question": "Have you ever been to London? Have you ever been to London?",
+            "hint": "No / Paris",
+            "expectedAnswer": "No, I haven't ever been to London, but I've been to Paris.",
+            "visualCue": "ロンドンの地図"
+          },
+          {
+            "id": "s4-l2-q2",
+            "question": "Have you lived in this city for more than five years? Have you lived in this city for more than five years?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, I've lived in this city for more than five years.",
+            "visualCue": "都市の風景"
+          },
+          {
+            "id": "s4-l2-q3",
+            "question": "Have you eaten anything today? Have you eaten anything today?",
+            "hint": "No / Coffee",
+            "expectedAnswer": "No, I haven't eaten anything today, but I've already had a coffee.",
+            "visualCue": "空の皿とコーヒー"
+          },
+          {
+            "id": "s4-l2-q4",
+            "question": "Have we almost finished this lesson? Have we almost finished this lesson?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, we've almost finished this lesson.",
+            "visualCue": "閉じた本"
+          },
+          {
+            "id": "s4-l2-q5",
+            "question": "Have you studied English since you were a child? Have you studied English since you were a child?",
+            "hint": "No / Last year",
+            "expectedAnswer": "No, I haven't studied English since I was a child, but I've studied it since last year.",
+            "visualCue": "教科書と鉛筆"
+          },
+          {
+            "id": "s4-l2-q6",
+            "question": "Has he ever flown in an airplane? Has he ever flown in an airplane?",
+            "hint": "No / Train",
+            "expectedAnswer": "No, he hasn't ever flown in an airplane, but he's ridden on a train.",
+            "visualCue": "飛行機"
+          },
+          {
+            "id": "s4-l2-q7",
+            "question": "Have you ever seen a ghost? Have you ever seen a ghost?",
+            "hint": "Yes / Movie",
+            "expectedAnswer": "Yes, I've seen a ghost in a movie.",
+            "visualCue": "おばけの絵"
+          },
+          {
+            "id": "s4-l2-q8",
+            "question": "Has it rained all day today? Has it rained all day today?",
+            "hint": "No / Hour",
+            "expectedAnswer": "No, it hasn't rained all day today, but it's rained for an hour.",
+            "visualCue": "雨と傘"
+          },
+          {
+            "id": "s4-l2-q9",
+            "question": "Have you bought a new car recently? Have you bought a new car recently?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, I've bought a new car recently.",
+            "visualCue": "新しい車"
+          },
+          {
+            "id": "s4-l2-q10",
+            "question": "Has she been a teacher for ten years? Has she been a teacher for ten years?",
+            "hint": "No / Five years",
+            "expectedAnswer": "No, she hasn't been a teacher for ten years, but she's been a teacher for five years.",
+            "visualCue": "教師と生徒"
+          },
+          {
+            "id": "s4-l2-q11",
+            "question": "Have you ever been to London? Have you ever been to London?",
+            "hint": "No / Rome",
+            "expectedAnswer": "No, I haven't ever been to London, but I've been to Rome.",
+            "visualCue": "ロンドンの地図"
+          },
+          {
+            "id": "s4-l2-q12",
+            "question": "How long have you lived in this city? How long have you lived in this city?",
+            "hint": "Yes / 5 years",
+            "expectedAnswer": "I've lived in this city for five years.",
+            "visualCue": "都市のスカイライン"
+          },
+          {
+            "id": "s4-l2-q13",
+            "question": "Have you lived in this city since 2000? Have you lived in this city since 2000?",
+            "hint": "No / 2015",
+            "expectedAnswer": "No, I haven't lived in this city since 2000, but I've lived here since 2015.",
+            "visualCue": "カレンダーの2000"
+          },
+          {
+            "id": "s4-l2-q14",
+            "question": "Have you eaten anything today? Have you eaten anything today?",
+            "hint": "Yes / breakfast",
+            "expectedAnswer": "Yes, I've eaten breakfast today.",
+            "visualCue": "朝食のプレート"
+          },
+          {
+            "id": "s4-l2-q15",
+            "question": "Have you drunk any coffee yet today? Have you drunk any coffee yet today?",
+            "hint": "No / Tea",
+            "expectedAnswer": "No, I haven't drunk any coffee yet today, but I've drunk some tea.",
+            "visualCue": "コーヒーカップ"
+          },
+          {
+            "id": "s4-l2-q16",
+            "question": "Have we finished the lesson yet? Have we finished the lesson yet?",
+            "hint": "No / not yet",
+            "expectedAnswer": "No, we haven't finished the lesson yet.",
+            "visualCue": "時計と教科書"
+          },
+          {
+            "id": "s4-l2-q17",
+            "question": "Have you ever read a book in English? Have you ever read a book in English?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, I've read a book in English.",
+            "visualCue": "開いた英字本"
+          },
+          {
+            "id": "s4-l2-q18",
+            "question": "How long have you studied English? How long have you studied English?",
+            "hint": "Yes / 2 years",
+            "expectedAnswer": "I've studied English for two years.",
+            "visualCue": "学生と本"
+          },
+          {
+            "id": "s4-l2-q19",
+            "question": "Has the teacher ever been to New York? Has the teacher ever been to New York?",
+            "hint": "No / Paris",
+            "expectedAnswer": "No, the teacher hasn't ever been to New York, but she's been to Paris.",
+            "visualCue": "自由の女神"
+          },
+          {
+            "id": "s4-l2-q20",
+            "question": "Have you done your homework for this class yet? Have you done your homework for this class yet?",
+            "hint": "No / will do later",
+            "expectedAnswer": "No, I haven't done my homework for this class yet, but I'll do it later.",
+            "visualCue": "宿題のノート"
+          }
+        ]
+      },
+      "3": {
+        "name": "Lesson 3: Conditionals (条件文)",
+        "questions": [
+          {
+            "id": "s4-l3-q1",
+            "question": "If it rains tomorrow, will you go out? If it rains tomorrow, will you go out?",
+            "hint": "No / Stay at home",
+            "expectedAnswer": "No, if it rains tomorrow, I won't go out, but I'll stay at home.",
+            "visualCue": "雨が降る家"
+          },
+          {
+            "id": "s4-l3-q2",
+            "question": "If you had a lot of money, what would you buy? If you had a lot of money, what would you buy?",
+            "hint": "Yes / Buy a big house",
+            "expectedAnswer": "If I had a lot of money, I'd buy a big house.",
+            "visualCue": "お金と大きな家"
+          },
+          {
+            "id": "s4-l3-q3",
+            "question": "If you speak English well, will it be easier to find a good job? If you speak English well, will it be easier to find a good job?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, if I speak English well, it'll be easier to find a good job.",
+            "visualCue": "英語を話す人"
+          },
+          {
+            "id": "s4-l3-q4",
+            "question": "If you were a bird, would you walk everywhere? If you were a bird, would you walk everywhere?",
+            "hint": "No / Fly",
+            "expectedAnswer": "No, if I were a bird, I wouldn't walk everywhere, but I'd fly.",
+            "visualCue": "空を飛ぶ鳥"
+          },
+          {
+            "id": "s4-l3-q5",
+            "question": "If you don't study today, will you understand the lesson tomorrow? If you don't study today, will you understand the lesson tomorrow?",
+            "hint": "No / Be confused",
+            "expectedAnswer": "No, if I don't study today, I won't understand the lesson tomorrow, but I'll be confused.",
+            "visualCue": "勉強しない学生"
+          },
+          {
+            "id": "s4-l3-q6",
+            "question": "If you could travel anywhere in the world, where would you go? If you could travel anywhere in the world, where would you go?",
+            "hint": "Yes / Go to Japan",
+            "expectedAnswer": "If I could travel anywhere in the world, I'd go to Japan.",
+            "visualCue": "世界地図の場所"
+          },
+          {
+            "id": "s4-l3-q7",
+            "question": "If it's sunny tomorrow, will you stay at home? If it's sunny tomorrow, will you stay at home?",
+            "hint": "No / Go out",
+            "expectedAnswer": "No, if it's sunny tomorrow, I won't stay at home, but I'll go out.",
+            "visualCue": "太陽と外出"
+          },
+          {
+            "id": "s4-l3-q8",
+            "question": "If you had a magic wand, what's the first thing you'd do? If you had a magic wand, what's the first thing you'd do?",
+            "hint": "Yes / Make everyone happy",
+            "expectedAnswer": "If I had a magic wand, I'd make everyone happy.",
+            "visualCue": "魔法の杖"
+          },
+          {
+            "id": "s4-l3-q9",
+            "question": "If you eat too much candy, will you feel healthy? If you eat too much candy, will you feel healthy?",
+            "hint": "No / Feel sick",
+            "expectedAnswer": "No, if I eat too much candy, I won't feel healthy, but I'll feel sick.",
+            "visualCue": "お菓子を食べる子供"
+          },
+          {
+            "id": "s4-l3-q10",
+            "question": "If you were invisible, would you still go to work? If you were invisible, would you still go to work?",
+            "hint": "No / Explore the world",
+            "expectedAnswer": "No, if I were invisible, I wouldn't go to work, but I'd explore the world.",
+            "visualCue": "透明人間"
+          },
+          {
+            "id": "s4-l3-q11",
+            "question": "What'll you do if it rains tomorrow? What'll you do if it rains tomorrow?",
+            "hint": "No / Stay at home",
+            "expectedAnswer": "No, I won't go out, but I'll stay at home.",
+            "visualCue": "雨が降る家の窓"
+          },
+          {
+            "id": "s4-l3-q12",
+            "question": "What would you buy if you had a lot of money? What would you buy if you had a lot of money?",
+            "hint": "Yes / Buy a big house",
+            "expectedAnswer": "If I had a lot of money, I'd buy a big house.",
+            "visualCue": "お金の山と家"
+          },
+          {
+            "id": "s4-l3-q13",
+            "question": "What would you do if you were a bird? What would you do if you were a bird?",
+            "hint": "Yes / Fly",
+            "expectedAnswer": "If I were a bird, I'd fly.",
+            "visualCue": "空を飛ぶ鳥"
+          },
+          {
+            "id": "s4-l3-q14",
+            "question": "Will you find a good job if you speak English well? Will you find a good job if you speak English well?",
+            "hint": "Yes",
+            "expectedAnswer": "Yes, I'll find a good job if I speak English well.",
+            "visualCue": "英語を話す人"
+          },
+          {
+            "id": "s4-l3-q15",
+            "question": "Would you study all day if you didn't have to work? Would you study all day if you didn't have to work?",
+            "hint": "No / Travel the world",
+            "expectedAnswer": "No, I wouldn't study all day, but I'd travel the world.",
+            "visualCue": "旅行する人"
+          },
+          {
+            "id": "s4-l3-q16",
+            "question": "What'll you do if the weather is good tomorrow? What'll you do if the weather is good tomorrow?",
+            "hint": "Yes / Go to the park",
+            "expectedAnswer": "If the weather's good tomorrow, I'll go to the park.",
+            "visualCue": "晴れた公園"
+          },
+          {
+            "id": "s4-l3-q17",
+            "question": "What would you do if you saw a ghost? What would you do if you saw a ghost?",
+            "hint": "No / Run away",
+            "expectedAnswer": "No, I wouldn't scream, but I'd run away very fast.",
+            "visualCue": "幽霊と逃げる人"
+          },
+          {
+            "id": "s4-l3-q18",
+            "question": "Will you eat nothing if you're hungry? Will you eat nothing if you're hungry?",
+            "hint": "No / Eat something",
+            "expectedAnswer": "No, I won't eat nothing, but I'll eat something.",
+            "visualCue": "お腹が空いた人"
+          },
+          {
+            "id": "s4-l3-q19",
+            "question": "What'll you do if your friend calls you later? What'll you do if your friend calls you later?",
+            "hint": "No / Answer the phone",
+            "expectedAnswer": "No, I won't ignore them, but I'll answer the phone.",
+            "visualCue": "電話をかける友達"
+          },
+          {
+            "id": "s4-l3-q20",
+            "question": "What animal would you be if you could be any animal? What animal would you be if you could be any animal?",
+            "hint": "No / Lion",
+            "expectedAnswer": "No, I wouldn't be a cat, but I'd be a lion.",
+            "visualCue": "ライオンの絵"
+          }
+        ]
+      }
+    }
+  }
+}
