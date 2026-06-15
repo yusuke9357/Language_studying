@@ -104,6 +104,8 @@ const App = {
     document.getElementById('rate-value').textContent = s.rate || 1.1;
     document.getElementById('range-pitch').value = s.pitch || 1.0;
     document.getElementById('pitch-value').textContent = s.pitch || 1.0;
+    document.getElementById('range-volume').value = s.volume !== undefined ? s.volume : 0.9;
+    document.getElementById('volume-value').textContent = s.volume !== undefined ? s.volume : 0.9;
   },
 
   // Populates speech synthesis voice selections in the UI settings screen
@@ -259,7 +261,8 @@ const App = {
     document.getElementById('btn-test-speech').addEventListener('click', () => {
       const rate = parseFloat(document.getElementById('range-rate').value);
       const pitch = parseFloat(document.getElementById('range-pitch').value);
-      SpeechManager.speakOnce('This is a test of the Callan AI Tutor speech engine.', { rate, pitch });
+      const volume = parseFloat(document.getElementById('range-volume').value);
+      SpeechManager.speakOnce('This is a test of the Callan AI Tutor speech engine.', { rate, pitch, volume });
     });
 
     // Range Sliders display update
@@ -271,6 +274,10 @@ const App = {
       document.getElementById('pitch-value').textContent = e.target.value;
     });
 
+    document.getElementById('range-volume').addEventListener('input', (e) => {
+      document.getElementById('volume-value').textContent = e.target.value;
+    });
+
     // Save Settings
     document.getElementById('btn-save-settings').addEventListener('click', async () => {
       const geminiKey = document.getElementById('settings-gemini-key').value.trim();
@@ -279,12 +286,13 @@ const App = {
       const voiceName = document.getElementById('select-voice').value;
       const rate = parseFloat(document.getElementById('range-rate').value);
       const pitch = parseFloat(document.getElementById('range-pitch').value);
+      const volume = parseFloat(document.getElementById('range-volume').value);
 
       await StorageManager.save({
         apiKey: geminiKey,
         githubToken: githubPat,
         gistId: gistId,
-        settings: { voiceName, rate, pitch }
+        settings: { voiceName, rate, pitch, volume }
       });
 
       UiManager.showToast('設定を保存しました');

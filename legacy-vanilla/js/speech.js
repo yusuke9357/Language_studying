@@ -42,8 +42,11 @@ const SpeechManager = {
       return;
     }
 
-    // Cancel any ongoing speech
-    window.speechSynthesis.cancel();
+    // Check if speaking first to avoid unnecessary resets, which cause audio clicks/pops
+    const wasSpeaking = window.speechSynthesis.speaking;
+    if (wasSpeaking) {
+      window.speechSynthesis.cancel();
+    }
 
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = 'en-US';
@@ -52,12 +55,35 @@ const SpeechManager = {
     const settings = StorageManager.db.settings || {};
     utterance.rate = options.rate || settings.rate || 1.1;
     utterance.pitch = options.pitch || settings.pitch || 1.0;
+    utterance.volume = options.volume !== undefined ? options.volume : (settings.volume !== undefined ? settings.volume : 0.9);
 
-    // Apply voice if selected
+    // Apply voice if selected, or default to a high-quality local English voice if none is explicitly saved
+    const voices = window.speechSynthesis.getVoices();
+    let selectedVoice = null;
+
     if (settings.voiceName) {
-      const voices = window.speechSynthesis.getVoices();
-      const selectedVoice = voices.find(v => v.name === settings.voiceName);
-      if (selectedVoice) utterance.voice = selectedVoice;
+      selectedVoice = voices.find(v => v.name === settings.voiceName);
+    }
+
+    // Smart auto-fallback to high-quality local service English voices to prevent distortion/latency
+    if (!selectedVoice && voices.length > 0) {
+      const englishVoices = voices.filter(v => v.lang.startsWith('en-'));
+      const localEnglishVoices = englishVoices.filter(v => v.localService === true);
+      
+      if (localEnglishVoices.length > 0) {
+        // Search priority: Samantha (standard clear iOS/macOS), Alex, Daniel, Google, or any local
+        selectedVoice = localEnglishVoices.find(v => v.name.includes('Samantha')) ||
+                        localEnglishVoices.find(v => v.name.includes('Alex')) ||
+                        localEnglishVoices.find(v => v.name.includes('Daniel')) ||
+                        localEnglishVoices.find(v => v.name.includes('Google')) ||
+                        localEnglishVoices[0];
+      } else if (englishVoices.length > 0) {
+        selectedVoice = englishVoices[0];
+      }
+    }
+
+    if (selectedVoice) {
+      utterance.voice = selectedVoice;
     }
 
     utterance.onend = () => {
@@ -69,7 +95,15 @@ const SpeechManager = {
       if (callback) callback();
     };
 
-    window.speechSynthesis.speak(utterance);
+    // To prevent clipping/audio crash on Safari and Chrome after cancelling,
+    // delay the speak action slightly if we just cancelled another utterance.
+    if (wasSpeaking) {
+      setTimeout(() => {
+        window.speechSynthesis.speak(utterance);
+      }, 50);
+    } else {
+      window.speechSynthesis.speak(utterance);
+    }
   },
 
   // Callan Method: speak the question TWICE with a brief pause

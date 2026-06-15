@@ -15,7 +15,8 @@ const StorageManager = {
     settings: {
       voiceName: '',
       rate: 1.1,
-      pitch: 1.0
+      pitch: 1.0,
+      volume: 0.9
     }
   },
 
@@ -224,7 +225,8 @@ const StorageManager = {
       settings: {
         voiceName: '',
         rate: 1.1,
-        pitch: 1.0
+        pitch: 1.0,
+        volume: 0.9
       }
     };
     this.saveLocal();

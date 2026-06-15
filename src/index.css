@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-display: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  }
+  
+  body {
+    font-family: var(--font-sans);
+    background-color: #080b11; /* Extremely premium deep dark space background */
+    color: #f3f4f6;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+/* Custom premium design system details */
+.glass {
+  background: rgba(15, 22, 38, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-card {
+  background: rgba(17, 25, 40, 0.5);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Dynamic Siri-style Glowing Aura Blob */
+@keyframes morphAura {
+  0% { border-radius: 42% 58% 62% 38% / 45% 45% 55% 55%; }
+  33% { border-radius: 70% 30% 52% 48% / 35% 65% 35% 65%; }
+  66% { border-radius: 48% 52% 30% 70% / 55% 35% 65% 45%; }
+  100% { border-radius: 42% 58% 62% 38% / 45% 45% 55% 55%; }
+}
+
+@keyframes pulseAura {
+  0% { transform: scale(1); filter: drop-shadow(0 0 15px rgba(99, 102, 241, 0.3)); opacity: 0.8; }
+  50% { transform: scale(1.06); filter: drop-shadow(0 0 30px rgba(6, 182, 212, 0.5)); opacity: 0.95; }
+  100% { transform: scale(1); filter: drop-shadow(0 0 15px rgba(99, 102, 241, 0.3)); opacity: 0.8; }
+}
+
+.aura-blob {
+  background: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
+  animation: morphAura 8s ease-in-out infinite, pulseAura 4s ease-in-out infinite;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.aura-blob.speaking {
+  animation: morphAura 3s ease-in-out infinite, pulseAura 1.5s ease-in-out infinite;
+  background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+}
+
+.aura-blob.listening {
+  animation: morphAura 5s ease-in-out infinite, pulseAura 2s ease-in-out infinite;
+  background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+}
+
+/* Springy button micro-interactions */
+.btn-bounce {
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s ease;
+}
+.btn-bounce:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+.btn-bounce:active {
+  transform: translateY(1px) scale(0.98);
+}
