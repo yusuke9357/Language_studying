@@ -33,9 +33,11 @@ class AudioHelper {
 
     // 3. Load AudioWorkletProcessor modules from public directory
     try {
-      await this.audioCtx.audioWorklet.addModule('/audio-processor.js');
+      const baseUrl = import.meta.env.BASE_URL || '/';
+      const cleanBaseUrl = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
+      await this.audioCtx.audioWorklet.addModule(`${cleanBaseUrl}audio-processor.js`);
     } catch (err) {
-      console.error('Failed to load AudioWorklet module. WebSockets fallback might be required.', err);
+      console.error('Failed to load AudioWorklet module:', err);
       throw new Error('AudioWorklet module failed to load. Make sure browser supports AudioWorklet.');
     }
 

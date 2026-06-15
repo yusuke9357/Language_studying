@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { StorageManager } from './utils/storage';
 import type { UserProgress } from './utils/storage';
+import { CurriculumManager } from './data/curriculum';
 import { Login } from './components/Login';
 import { Dashboard } from './components/Dashboard';
 import { Settings } from './components/Settings';
@@ -30,6 +31,9 @@ export const App: React.FC = () => {
       try {
         console.log('Initializing Callan AI Tutor...');
         const syncResult = await StorageManager.init();
+        
+        // Load curriculum syllabus data
+        await CurriculumManager.load();
         
         if (!StorageManager.isConfigured()) {
           setScreen('setup');
